@@ -10,6 +10,7 @@
 </script>
 <div id="product-form">
     <h2>Prisma SQLite</h2>
+
     <form method="GET">
         <input type="hidden" name="operation" bind:value={op}>
         <input type="hidden" name="id" bind:value={id}>
@@ -46,12 +47,12 @@
 </div>
 <style>
 #product-form {
-  width: 280px;
-  margin: 0 auto;
-  background-color: #fcfcfc;
-  padding: 20px 50px 40px;
-  box-shadow: 1px 4px 10px 1px #aaa;
-  font-family: sans-serif;
+    width: 280px;
+    margin: 0 auto;
+    background-color: #fcfcfc;
+    padding: 20px 50px 40px;
+    box-shadow: 1px 4px 10px 1px #aaa;
+    font-family: sans-serif;
 }
 
 #product-form * {
@@ -59,21 +60,21 @@
 }
 
 #product-form h2{
-  text-align: center;
-  margin-bottom: 30px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 #product-form input {
-  margin-bottom: 15px;
+    gin-bottom: 15px;
 }
 
 #product-form input[type=text] {
-  display: block;
-  height: 32px;
-  padding: 6px 16px;
-  width: 100%;
-  border: none;
-  background-color: #f3f3f3;
+    display: block;
+    height: 32px;
+    padding: 6px 16px;
+    width: 100%;
+    border: none;
+    background-color: #f3f3f3;
 }
 
 </style>

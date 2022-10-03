@@ -1,9 +1,10 @@
-import { error, redirect } from '@sveltejs/kit';
-import { PrismaClient, Prisma  } from '@prisma/client'
+import { Prisma } from "@prisma/client";
 import type { Product } from '../api';
-const prisma = new PrismaClient()
+import prisma from '../api';
+
 /** @type {Products}*/
 const emptyProduct: any[] = []
+
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ url }) {
     const s = url.searchParams
@@ -43,14 +44,12 @@ console.log(op)
 
     }
     if(op=="delete") //avoid reload and delete again
-        throw redirect(303, url.pathname)
+        return;
 
     try{   
-        const p = (op=="search"&&name!="")?
-            await prisma.product.findMany({where:{name:{contains:name}}}):
-            await prisma.product.findMany()
+        const p = await prisma.person.findMany()
         await prisma.$disconnect()
-        return { products:p, message }
+        return { persons:p, message }
 
     } catch (e) {
         if (e instanceof Prisma.PrismaClientKnownRequestError) {

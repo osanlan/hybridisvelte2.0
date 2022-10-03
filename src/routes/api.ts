@@ -7,9 +7,28 @@
 	guarantees are made. Don't use it to organise your life.)
 */
 
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client"
 
-const prisma = new PrismaClient();
+declare global {
+	namespace NodeJS {
+		interface Global {
+			prisma: PrismaClient;
+		}
+	}
+}
+let prisma: PrismaClient
+
+if (process.env.NODE_ENV === "production") {
+	prisma = new PrismaClient()
+} else {
+	if (!global.prisma) {
+		global.prisma = new PrismaClient()
+	}
+
+	prisma = global.prisma
+}
+
+export default prisma
 
 export type Todo = {
 	uid: string;
