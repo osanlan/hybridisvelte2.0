@@ -1,12 +1,8 @@
 import { redirect } from '@sveltejs/kit';
-import { getSession } from "lucia-sveltekit/client";
+import { getSession } from "lucia-sveltekit/load";
 import type { PageLoad } from "./$types";
 
-// /** @type {import('./$types').PageLoad} */
-export const load: PageLoad =  async () => {
-    const session = await getSession();
-    console.log(session)
-    if (session) {
-        throw redirect(302, "/admin/panel");
-    }
-}
+export const load: PageLoad = async (event) => {
+    const session = await getSession(event);
+    if (session) throw redirect(302, '/admin/panel');    
+};

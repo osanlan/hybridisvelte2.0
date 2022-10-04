@@ -65,7 +65,7 @@
 }
 
 #product-form input {
-    gin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 #product-form input[type=text] {

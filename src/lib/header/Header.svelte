@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import logo from './svelte-logo.svg';
+	import { getSession } from "lucia-sveltekit/client";
+
+	const session = getSession();
 </script>
 
 <header>
@@ -36,8 +39,14 @@
 		</svg>
 	</nav>
 
-	<div class="corner">
-		<!-- TODO put something else here? github link? -->
+	<div class="logged">
+		{#if ($session == null)}
+			not logged in
+		{:else}
+			logged in as {$session.user.email}
+			<a href="/admin/logout">Logout</a>
+		{/if}
+
 	</div>
 </header>
 
@@ -128,5 +137,8 @@
 
 	a:hover {
 		color: var(--accent-color);
+	}
+	.logged {
+		background-color: aliceblue;
 	}
 </style>

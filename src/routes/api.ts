@@ -45,3 +45,11 @@ export type Product = {
 	category:string;
 	tags:string
 }
+
+export type Person = {
+	id: string;
+	name:string;
+	group:string;
+	title:string;
+	
+}
