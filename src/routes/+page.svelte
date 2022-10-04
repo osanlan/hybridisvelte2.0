@@ -16,7 +16,7 @@
 			</picture>
 		</span>
 
-		to your new<br />SvelteKit app
+		to yohaloour new<br />SvelteKit app
 	</h1>
 
 	<h2>
