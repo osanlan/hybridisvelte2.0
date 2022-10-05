@@ -8,6 +8,7 @@
 	<form name="testataan" method="POST" data-netlify="true">
 		Nimi: <input type="text" name="name" />
 		Viesti: <input type="text" name="message" />
+		<input type="submit" />
 	</form>
 
 	<p>
