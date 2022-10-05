@@ -5,6 +5,10 @@
 
 <div class="content">
 	<h1>About this app</h1>
+	<form name="testataan" method="POST" data-netlify="true">
+		Nimi: <input type="text" name="name" />
+		Viesti: <input type="text" name="message" />
+	</form>
 
 	<p>
 		This is a <a href="https://kit.svelte.dev">SvelteKit</a> app. You can make your own by typing the
