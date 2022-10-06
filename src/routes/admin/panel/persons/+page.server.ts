@@ -16,7 +16,7 @@ export async function load({ url }) {
     let order = s.get("order")??0
     let data = {name,group,title,order}
     let message=""
-console.log(op)
+    
     try {
         switch (op) {
             case "update":

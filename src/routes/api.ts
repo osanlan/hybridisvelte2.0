@@ -51,5 +51,6 @@ export type Person = {
 	name:string;
 	group:string;
 	title:string;
+	order:number;
 	
 }
