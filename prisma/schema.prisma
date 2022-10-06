@@ -15,6 +15,7 @@ model Person {
   group     Group
   title     String
   name      String
+  testi     String @default("heh")
   order     Int @default(0)
 }
 

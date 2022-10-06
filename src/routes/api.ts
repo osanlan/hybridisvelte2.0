@@ -26,6 +26,7 @@ export type Person = {
 	name:string;
 	group:string;
 	title:string;
+	testi:string;
 	order:number;
 	
 }
