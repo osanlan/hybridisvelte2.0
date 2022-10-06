@@ -9,7 +9,7 @@
 
     let message = data.message;
 
-    let id="", op="", name="", title="", group="hallitus"
+    let id="", op="", name="", title="", group="hallitus", order=""
     $: disable_update = (name=="" || id=="" || title=="" )
     $: disable_create = (name=="" || title=="" )
     $: disable_delete = (id == "")
@@ -32,6 +32,7 @@
         <option value="YHDENVERTAISET">Yhdenvertaiset</option>
     </select>
     <input type="text" name="title" bind:value={title} placeholder="Pesti">
+    <input type="number" name="order" bind:value={order} placeholder="Järjestys">
     <input type="submit" disable={disable_create} value="Create" on:click={()=>{op='create';id=""}}>
     <input type="submit" disabled={disable_update} value="Update" on:click={()=>{op='update'}}>
     <input type="submit" disabled={disable_delete} value="Delete" on:click={()=>{op='delete'}}>
@@ -40,15 +41,16 @@
 <br>
 <br>
 <h2>HALLITUS</h2>
-{#each hallitus as p }
+{#each hallitus.sort((a,b) => a.order - b.order) as p }
     <div>
         <b on:click={() => {
             id = p.id??"Unknown person"
             name = p.name??""
             group = p.group??""
             title = p.title??""
+            order = p.order??0
         }}>
-        {p.name} {p.title} </b>
+       {p.order} {p.name} {p.title} </b>
     </div>
     
 {/each}
@@ -60,8 +62,9 @@
             name = p.name??""
             group = p.group??""
             title = p.title??""
+            order = p.order??0
         }}>
-        {p.name} {p.title} </b>
+        {p.order} {p.name} {p.title} </b>
     </div>
     
 {/each}

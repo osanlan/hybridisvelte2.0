@@ -13,7 +13,8 @@ export async function load({ url }) {
     let name = s.get("name")?.toString()??"Unknown person"
     let group = s.get("group")??"hallitus"
     let title = s.get("title")?.toString()??"Unknown title"
-    let data = {name,group,title}
+    let order = parseInt(s.get("order"))
+    let data = {name,group,title,order}
     let message=""
 console.log(op)
     try {
@@ -43,7 +44,7 @@ console.log(op)
 
     }
     if(op=="delete") {//avoid reload and delete again
-        throw redirect(301, '/admin');
+        throw redirect(301, '/admin/panel/persons');
     }
 
     try{   
