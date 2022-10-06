@@ -55,7 +55,7 @@
     
 {/each}
 <h2>TUOTANTOTIIMI</h2>
-{#each tuottis as p }
+{#each tuottis.sort((a,b) => a.order - b.order) as p }
     <div>
         <b on:click={() => {
             id = p.id??"Unknown person"
