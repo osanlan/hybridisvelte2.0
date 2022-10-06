@@ -4,6 +4,7 @@
     export let data;
 
     let groups = data.persons
+    console.log(groups)
     let hallitus = groups.filter(g => g.group == "HALLITUS");
     let tuottis = groups.filter(g => g.group == "TUOTANTOTIIMI");
 
@@ -13,7 +14,7 @@
     $: disable_update = (name=="" || id=="" || title=="" )
     $: disable_create = (name=="" || title=="" )
     $: disable_delete = (id == "")
-    
+    console.log(hallitus)
     const session = getSession();
     let admin = false;
     if ($session) {
@@ -62,7 +63,7 @@
             name = p.name??""
             group = p.group??""
             title = p.title??""
-            order = p.order??0
+            order = p.order??23
         }}>
         {p.order} {p.name} {p.title} </b>
     </div>

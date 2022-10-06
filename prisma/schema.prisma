@@ -15,7 +15,7 @@ model Person {
   group     Group
   title     String
   name      String
-  order     Int @default(0)
+  order     Int @db.Integer @default(0)
 }
 
 enum Group {
