@@ -13,7 +13,7 @@ export async function load({ url }) {
     let name = s.get("name")?.toString()??"Unknown person"
     let group = s.get("group")?.toString()??"Unknown group"
     let title = s.get("title")?.toString()??"Unknown title"
-    let order = s.get("order")??0
+    let order = Number(s.get("order")??0)
     let data = {name,group,title,order}
     let message=""
 
