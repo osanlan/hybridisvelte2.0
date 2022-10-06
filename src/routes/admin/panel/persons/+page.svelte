@@ -9,7 +9,7 @@
 
     let message = data.message;
 
-    let id="", op="", name="", title="", group="hallitus", order=""
+    let id="", op="", name="", title="", group="hallitus", order=0
     $: disable_update = (name=="" || id=="" || title=="" )
     $: disable_create = (name=="" || title=="" )
     $: disable_delete = (id == "")
