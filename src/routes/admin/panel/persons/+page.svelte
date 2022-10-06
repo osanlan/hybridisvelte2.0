@@ -6,14 +6,14 @@
     let groups = data.persons
     let hallitus = groups.filter(g => g.group == "HALLITUS");
     let tuottis = groups.filter(g => g.group == "TUOTANTOTIIMI");
-
+console.log(hallitus);
     let message = data.message;
 
     let id="", op="", name="", title="", group="hallitus", order=0
     $: disable_update = (name=="" || id=="" || title=="" )
     $: disable_create = (name=="" || title=="" )
     $: disable_delete = (id == "")
-    
+
     const session = getSession();
     let admin = false;
     if ($session) {
