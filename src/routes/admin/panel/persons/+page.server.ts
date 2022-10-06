@@ -11,12 +11,12 @@ export async function load({ url }) {
     let id = s.get("id")?.toString()??""
     let op = s.get("operation")?.toString()??""
     let name = s.get("name")?.toString()??"Unknown person"
-    let group = s.get("group")??"hallitus"
+    let group = s.get("group")?.toString()??"Unknown group"
     let title = s.get("title")?.toString()??"Unknown title"
     let order = s.get("order")??0
     let data = {name,group,title,order}
     let message=""
-    
+
     try {
         switch (op) {
             case "update":
