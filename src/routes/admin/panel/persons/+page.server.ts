@@ -13,7 +13,7 @@ export async function load({ url }) {
     let name = s.get("name")?.toString()??"Unknown person"
     let group = s.get("group")??"hallitus"
     let title = s.get("title")?.toString()??"Unknown title"
-    let order = parseInt(s.get("order"))??0
+    let order = s.get("order")??0
     let data = {name,group,title,order}
     let message=""
 console.log(op)
