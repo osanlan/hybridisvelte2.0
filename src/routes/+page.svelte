@@ -8,25 +8,13 @@
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</span>
-
-		to yohaloour new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
+	<div class="welcome">
+		<img src="logo.png" alt="Welcome" />
+		<h1>Tervetuloa HybridiSpeksiin</h1>
+	</div>
 </section>
 
-<style>
+<style lang="scss">
 	section {
 		display: flex;
 		flex-direction: column;
@@ -40,18 +28,28 @@
 	}
 
 	.welcome {
-		display: block;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		position: relative;
 		width: 100%;
-		height: 0;
 		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100vw;
+			height: 100vw;
+			z-index: -1;
+			background-image: conic-gradient(from 0deg at 50% 50%, #FFFFFFFF 0%, #8A8A8AFF 24%, #FFFFFFFF 50%, #818181FF 75%, #FFFFFFFF 100%);
+			background-size: 100% 100%;
+			background-position: 0px 0px;
+		}
+		img {
+			height: 30vw;
+			@media only screen and (max-width:800px) {
+				height: 50vw;
+			}
+		}
 	}
 </style>
