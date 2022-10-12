@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,12 +8,40 @@ datasource db {
 }
 
 model Person {
-  id        String     @default(cuid()) @id
-  group     Group
-  title     String
-  name      String
-  testi     String @default("heh")
-  order     Int @default(0)
+  id    String @id @default(cuid())
+  title String
+  name  String
+  group Group
+  order Int    @default(0)
+}
+
+model User {
+  id               String         @id @unique @default(cuid())
+  identifier_token String         @unique
+  hashed_password  String?
+  email            String         @unique
+  role             Role           @default(NOOB)
+  RefreshToken     RefreshToken[]
+
+  @@map("user")
+}
+
+model RefreshToken {
+  id            Int    @id @unique @default(autoincrement())
+  refresh_token String @unique
+  user_id       String
+  user          User   @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@index([user_id])
+  @@map("refresh_token")
+}
+
+model Product {
+  id       String @id @default(cuid())
+  name     String
+  category String
+  price    Int
+  tags     String
 }
 
 enum Group {
@@ -30,32 +55,4 @@ enum Role {
   ADMIN
   EDITOR
   NOOB
-}
-
-model User {
-  id                String @default(cuid()) @id @unique
-  identifier_token  String  @unique
-  hashed_password   String?
-  email             String @unique
-  role              Role @default(NOOB)
-  RefreshToken      RefreshToken[]
-  @@map("user")
-}
-
-model RefreshToken {
-  id                Int @id @unique @default(autoincrement())
-  refresh_token     String @unique
-  user              User @relation(references: [id], fields: [user_id], onDelete: Cascade)
-  user_id           String
-
-  @@index([user_id])
-  @@map("refresh_token")
-}
-
-model Product {
-    id   String @id @default(cuid())
-    name String
-    category String
-    price Int
-    tags String
 }
