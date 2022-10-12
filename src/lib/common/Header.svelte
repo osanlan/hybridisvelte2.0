@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import logo from './svelte-logo.svg';
 	import { getSession } from "lucia-sveltekit/client";
 
 	const session = getSession();
@@ -8,9 +7,7 @@
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
-		</a>
+		corner
 	</div>
 
 	<nav data-sveltekit-prefetch>
