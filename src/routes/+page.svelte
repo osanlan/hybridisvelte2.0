@@ -13,7 +13,7 @@
 	<div class="welcome">
 		<img class="text" src="logo_text.png" alt="Welcome" draggable=false />
 		<div class="spin">
-			<img class="bow" src="logo_bowtie.png" alt="Welcome" draggable=false />
+			<img class="bow" src="logo_bowtie_small.png" alt="Welcome" draggable=false />
 		</div>
 	</div>
 
