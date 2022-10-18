@@ -15,6 +15,19 @@ model Person {
   order Int    @default(0)
 }
 
+enum Group {
+  HALLITUS
+  TOIMIHENKILOT
+  YHDENVERTAISET
+  TUOTANTOTIIMI
+}
+
+enum Role {
+  ADMIN
+  EDITOR
+  NOOB
+}
+
 model User {
   id               String         @id @unique @default(cuid())
   identifier_token String         @unique
@@ -36,23 +49,9 @@ model RefreshToken {
   @@map("refresh_token")
 }
 
-model Product {
-  id       String @id @default(cuid())
-  name     String
-  category String
-  price    Int
-  tags     String
+model Content {
+  id        Int @id @unique @default(autoincrement())
+  label     String
+  content   String
 }
 
-enum Group {
-  HALLITUS
-  TOIMIHENKILOT
-  YHDENVERTAISET
-  TUOTANTOTIIMI
-}
-
-enum Role {
-  ADMIN
-  EDITOR
-  NOOB
-}

@@ -8,6 +8,10 @@
     $: disable_create = (name=="" || price<1 )
     $: disable_delete = (id == "")
 </script>
+<svelte:head>
+	<title>Yhteystiedot</title>
+	<meta name="description" content="Yhteystiedot" />
+</svelte:head>
 <div id="product-form">
     <h2>Prisma SQLite</h2>
 

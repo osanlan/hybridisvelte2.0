@@ -3,8 +3,8 @@
 	import Stars from '$lib/components/stars.svelte';
 </script>
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>HybridiSpeksi</title>
+	<meta name="description" content="HybridiSpeksin koti" />
 </svelte:head>
 
 
@@ -13,7 +13,8 @@
 	<div class="welcome">
 		<img class="text" src="logo_text.png" alt="Welcome" draggable=false />
 		<div class="spin">
-			<img class="bow" src="logo_bowtie_small.png" alt="Welcome" draggable=false />
+			<!-- <img class="bow" src="logo_bowtie_small.png" alt="Welcome" draggable=false /> -->
+			<img class="bow" src="logo_hourglass.png" alt="Welcome" draggable=false />
 		</div>
 	</div>
 
@@ -24,13 +25,16 @@
 
 
 <style lang="scss">
+	body {
+		background-color: black!important;
+
+	}
 	section {
 		max-height: 700px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		flex: 1;
 		overflow: hidden;
 		.welcome {
 			display: flex;
@@ -51,12 +55,12 @@
 					animation: spin 4s linear 0s normal infinite;
 					-moz-animation: 4s linear 0s normal none infinite spin;
 					-webkit-animation: spin 4s linear 0s normal infinite;
-					z-index: 1;
+					// z-index: 2;
 				}
 			}
 			img {
-				z-index: 1;
-				height: 30vw;
+				// z-index: 1;
+				height: 25vw;
 				-webkit-touch-callout: none;
 				-webkit-user-select: none;
 				user-select: none;
@@ -81,16 +85,16 @@
 	}
 
 	@keyframes spin {
-		0% { transform: rotate(360deg); transform-origin: 50% 47% 0; }
-		100% { transform: rotate(0deg); transform-origin: 50% 47% 0; }
+		0% { transform: rotate(360deg); transform-origin: 50% 50% 0; }
+		100% { transform: rotate(0deg); transform-origin: 50% 50% 0; }
 	}
 	@-moz-keyframes spin {
-		0% { -moz-transform: rotate(360deg); -moz-transform-origin: 50% 47% 0; }
-		100% { -moz-transform: rotate(0deg); -moz-transform-origin: 50% 47% 0; }
+		0% { -moz-transform: rotate(360deg); -moz-transform-origin: 50% 50% 0; }
+		100% { -moz-transform: rotate(0deg); -moz-transform-origin: 50% 50% 0; }
 	}
 	@-webkit-keyframes spin {
-		0% {-webkit-transform: rotate(360deg); -webkit-transform-origin: 50% 47% 0; }
-		100% { -webkit-transform: rotate(0deg); -webkit-transform-origin: 50% 47% 0; }
+		0% {-webkit-transform: rotate(360deg); -webkit-transform-origin: 50% 50% 0; }
+		100% { -webkit-transform: rotate(0deg); -webkit-transform-origin: 50% 50% 0; }
 	}
 
 

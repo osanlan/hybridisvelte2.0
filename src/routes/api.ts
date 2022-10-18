@@ -1,12 +1,12 @@
 import { PrismaClient } from "@prisma/client"
-
-declare global {
-	namespace NodeJS {
-		interface Global {
-			prisma: PrismaClient;
-		}
-	}
-}
+declare var global: { prisma: PrismaClient };
+// declare global {
+// 	namespace NodeJS {
+// 		interface Global {
+// 			prisma: PrismaClient;
+// 		}
+// 	}
+// }
 let prisma: PrismaClient
 
 if (process.env.NODE_ENV === "production") {
@@ -26,7 +26,12 @@ export type Person = {
 	name:string;
 	group:string;
 	title:string;
-	testi:string;
 	order:number;
-	
 }
+
+export type Content = {
+	id:string;
+	label:string;
+	content:string;
+}
+

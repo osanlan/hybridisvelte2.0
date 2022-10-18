@@ -7,7 +7,7 @@
 
 <header>
 	<div class="corner">
-		<img src="logo.png" alt=""/>
+		<img src="/logo.png" alt=""/>
 	</div>
 
 	<nav data-sveltekit-prefetch>
@@ -16,19 +16,22 @@
 		</svg>
 		<ul>
 			<li class:active={$page.url.pathname === '/'}>
-				<a href="/">Home</a>
+				<a href="/">HybridiSpeksi</a>
 			</li>
-			<li class:active={$page.url.pathname === '/about'}>
-				<a href="/about">About</a>
+			<!-- <li class:active={$page.url.pathname === '/rekry'}>
+				<a href="/about">Rekry</a>
+			</li> -->
+			<li class:active={$page.url.pathname === '/speksi'}>
+				<a href="/speksi">Speksi</a>
 			</li>
-			<li class:active={$page.url.pathname === '/todos'}>
-				<a href="/todos">Todos</a>
+			<li class:active={$page.url.pathname === '/historia'}>
+				<a href="/historia">Aikaisemmat speksit</a>
 			</li>
-			<li class:active={$page.url.pathname === '/pepl'}>
-				<a href="/pepl">pepl</a>
+			<li class:active={$page.url.pathname === '/keikat'}>
+				<a href="/keikat">Keikat</a>
 			</li>
-			<li class:active={$page.url.pathname === '/admin'}>
-				<a href="/admin">admin</a>
+			<li class:active={$page.url.pathname === '/yhteystiedot'}>
+				<a href="/yhteystiedot">Yhteystiedot</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
@@ -38,7 +41,13 @@
 
 	<div class="logged">
 		{#if ($session == null)}
-			not logged in
+		<nav data-sveltekit-prefetch>
+			<ul>
+				<li class:active={$page.url.pathname.includes('/admin')}>
+					<a href="/admin">admin</a>
+				</li>
+			</ul>
+		</nav>
 		{:else}
 			logged in as {$session.user.email}
 			<a href="/admin/logout">Logout</a>
