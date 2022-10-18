@@ -1,0 +1,317 @@
+[
+    {
+      "id": "hali",
+      "name": "H.A.L.I.",
+      "year": 2015,
+      "poster": "2015_1_thumb.jpg",
+      "banner": "hali_banner.jpg",
+      "background": "hali_background.jpg",
+      "statistics": [
+        { "Ensi-ilta": "17.4.2015" },
+        { "Näytöksiä": "8" },
+        { "Teatteri": "Barker-teatteri" },
+        { "Produktiossa mukana": "65" }
+      ],
+      "generateText": true,
+      "text": [
+        "Turun yliopiston huippututkija Viktor Salaoja ja hänen assistenttinsa kehittävät Turun yliopiston hämyisissä työhuoneissa ratkaisuja monenlaisiin yhteiskunnassa vastaan tulleisiin ongelmiin.",
+        "Samaan aikaan kaupungilla Hyvinvointia ja Avunantoa Lainkuuliaisille Ihmisille -puolue (H.A.L.I.) tekee kiihkeää kampanjatyötä ja valmistautuu edessä oleviin kunnanvaltuuston vaaleihin.",
+        "Kun H.A.L.I. pääsee vallankahvaan kiinni, joutuu Viktor tiimeineen keskelle myrskyä. Tieteellinen huippututkimus valjastetaan poliittisen päätäntäkoneiston osaksi tuomaan absoluuttista tasa-arvoa ihmisten elämään. Minkälaisia vaikutuksia on Kauppatorilla riehuvalla tornadolla tai Ruissalon uusilla surffauskeleillä? Miltä tuntuisi päästä lomailemaan etelän lämpöön ihan kaupunkiliikenteen bussilla? Entä miten pakollinen halaus ihmisten kohdatessa vaikuttaa tasa-arvoistamiseen? Minkälaista uudelleenkoulutusta Muumimaailmassa annetaankaan?",
+        "Ensimmäinen HybridiSpeksi saapui näyttämölle rennosti kantaaottavalla ja opiskelijaromantiikallakin höystetyllä toimintakomedialla keväällä 2015."
+      ],
+      "images": 11,
+      "resources": [
+        {
+          "title": "Käsiohjelma",
+          "url": "images/db/2015/hali_kasiohjelma.pdf"
+        },
+        {
+          "title": "Teaser traileri",
+          "url": "https://www.youtube.com/watch?v=_rFDduZKsyY"
+        },
+        {
+          "title": "Ensi-iltatraileri",
+          "url": "https://www.youtube.com/watch?v=XcAjZfRsYRo"
+        }
+      ],
+      "colors": {
+        "bg1": "#ff2c79",
+        "bg2": "#faff00",
+        "button": "#68c306"
+      }
+    },
+    {
+      "id": "bratvakontra",
+      "name": "BratvaKontra – Yhteys on katkennut",
+      "year": 2016,
+      "poster": "2016_1_thumb.jpg",
+      "banner": "bratva_banner.jpg",
+      "background": "bratva_background.jpg",
+      "statistics": [
+        { "Ensi-ilta": "1.4.2016" },
+        { "Näytöksiä": "10" },
+        { "Teatteri": "Tanssiteatteri ERI" },
+        { "Produktiossa mukana": "89" }
+      ],
+      "generateText": true,
+      "text": [
+        "Kolme nuorta on kateissa. Tilanne on toki ikävä, enkä saisi elätellä liian suuria toiveita, mutta tämän ansiosta saatan vihdoin edetä tutkinnassani. BratvaKontra toimii yleensä harkitusti, eikä ole aikaisemmin jättänyt mitään pitäviä todisteita lainvastaisesta toiminnastaan.",
+        "Vaikken voi suoraan osoittaa yhteyttä kadonneiden nuorten ja BratvaKontran välillä, viimeaikaiset tapahtumat viittaavat heidän käyttävän näitä nuoria tavotteidensa saavuttamiseksi. Miksi BratvaKontra poikkeaa kaavastaan? Mihin kylmän laskelmoivasti toimiva rikollisliiga heitä tarvitsee?",
+        "En tiedä. Vielä.",
+        "Etsivä Saarnion muistiinpanot, 28.01. vuosi 21 jsk.",
+        "Historian toinen HybridiSpeksi sai ensi-iltansa 1.4.2016 tanssiteatteri ERI:ssä. HybridiSpeksi 2016 toi näyttämölle verellä, salajuonilla ja huumorilla terästetyn toiminnallisen jännitysnäytelmän opiskelijakolmikosta alamaailman rikoshelvetissä."
+      ],
+      "images": 66,
+      "resources": [
+        {
+          "title": "Teaseri",
+          "url": "https://www.youtube.com/watch?v=wT-H4CbfGA4"
+        },
+        {
+          "title": "Esiosaelokuva",
+          "url": "https://www.youtube.com/watch?v=xrDZypmq0O0"
+        },
+        {
+          "title": "Mokakela",
+          "url": "https://www.youtube.com/watch?v=BhMW1tA9T5M"
+        },
+        {
+          "title": "Traileri",
+          "url": "https://www.youtube.com/watch?v=d3wmLlok1aM"
+        }
+      ],
+      "colors": {
+        "bg1": "#750101",
+        "bg2": "#dc7f1f",
+        "button": "#dc7f1f"
+      }
+    },
+    {
+      "id": "kruununkohtalo",
+      "name": "Kruunun kohtalo – Kalevalan perintö",
+      "year": 2017,
+      "poster": "2017_1_thumb.jpg",
+      "banner": "kruunu_banner.jpg",
+      "statistics": [
+        { "Ensi-ilta": "12.4.2017" },
+        { "Näytöksiä": "8" },
+        { "Teatteri": "Manilla" },
+        { "Produktiossa mukana": "101" }
+      ],
+      "generateText": true,
+      "text": [
+        "Kalevalan lopussa Louhi on kukistettu ja Karjalassa on viimein rauha. Väinämöinen on lähtenyt Karjalasta ja jatkanut matkaansa muihin seikkailuihin jättäen velhoneuvoston huolehtimaan kruunusta. Kylän neito Marjatta syö puolukan ja tulee raskaaksi. Ennustuksen mukaan Marjatan lapsesta, Puolukasta, on tuleva Karjalan hallitsija. Velhoneuvosto auttaa Marjattaa kasvattamaan Puolukan opettaen häntä hallitsijan rooliin.",
+        "Puolukan saavutettua täysi-ikäisyyden, koko kansa valmistautuu hänen kruunajaisiinsa. Kaikki on valmiina. Kruunajaiset voivat alkaa!",
+        "\"SEIS! Entä kruununperillisen tulikoe?\"",
+        "HybridiSpeksi 2017: Kruunun kohtalo – Kalevalan perintö herätti henkiin kauan sitten unohdetun kansantarun, kertoen Suomen kansalliseepoksen, Kalevalan, jälkeisistä tapahtumista. Saunan täydeltä tervaisia sankareita ja suomalaista sisua!"
+      ],
+      "images": 66,
+      "resources": [
+        {
+          "title": "Käsiohjelma",
+          "url": "images/db/2017/kruunu_kasiohjelma.pdf"
+        },
+        {
+          "title": "Rekryvideo",
+          "url": "https://www.youtube.com/watch?v=dxVvUhmQSR8"
+        },
+        {
+          "title": "Teaseri",
+          "url": "https://www.youtube.com/watch?v=fc3S2YIEGoU"
+        },
+        {
+          "title": "Traileri",
+          "url": "https://www.youtube.com/watch?v=tOoKZ18JxKc"
+        },
+        {
+          "title": "Kulissien takana",
+          "url": "https://www.youtube.com/watch?v=NAf4slSBLfY"
+        },
+        {
+          "title": "Time-lapse",
+          "url": "https://www.youtube.com/watch?v=mQ_4F2T4rYM"
+        },
+        {
+          "title": "Ensi-iltatraileri",
+          "url": "https://www.youtube.com/watch?v=J4TUuiVtsV0"
+        }
+      ],
+      "colors": {
+        "bg1": "#386638",
+        "bg2": "#ebe4c7",
+        "button": "#386638",
+        "buttonColor": "#ebe4c7" 
+      }
+    },
+    {
+      "id": "alaammuohi",
+      "name": "Älä ammu ohi",
+      "year": 2018,
+      "poster": "2018_1_thumb.jpg",
+      "banner": "alaammuohi_banner.jpg",
+      "background": "alaammuohi_background.jpg",
+      "statistics": [
+        { "Ensi-ilta": "27.3.2018" },
+        { "Näytöksiä": "8" },
+        { "Teatteri": "Manilla" },
+        { "Produktiossa mukana": "117" }
+      ],
+      "generateText": true,
+      "text": [
+        "Villin lännen kuumimmalla aavikolla on pieni kylä keskellä preeriaa. Tuomari Martin pitää yllä järjestystä lakikirjalla ja hirttosilmukalla, samalla ryysyistä rikkauksiin kohonnut Alexandra hallitsee kyläläisten kukkaroita ja himoja. Kaikkien rakastama pappi, Isä Henry, tekee parhaansa pitääkseen harmonian näiden kahden ja asukkaiden välillä. Tasapaino kuitenkin järkkyy, kun sen keskelle ilmestyy raakalaismaisen rikollisliigan johtajatar suojaa etsien."
+      ],
+      "images": 48,
+      "resources": [
+        {
+          "title": "Käsiohjelma",
+          "url": "images/db/2018/alaammuohi_kasiohjelma.pdf"
+        },
+        {
+          "title": "Promobileet",
+          "url": "https://www.youtube.com/watch?v=8F76TvIYbPQ"
+        },
+        {
+          "title": "Traileri",
+          "url": "https://www.youtube.com/watch?v=vhLvRVZabTA"
+        },
+        {
+          "title": "Ensi-iltatraileri",
+          "url": "https://www.youtube.com/watch?v=HDXnIJ0wcII"
+        }
+      ],
+      "colors": {
+        "bg1": "#bd5113",
+        "bg2": "#ffffff",
+        "button": "#bd5113",
+        "buttonColor": "#ffffff" 
+      }
+    },
+    {
+      "id": "viimeinenlohikaarmeisku",
+      "name": "Viimeinen lohikäärmeisku",
+      "year": 2019,
+      "poster": "2019_1_thumb.jpg",
+      "banner": "viimeinen_banner.jpg",
+      "statistics": [
+        { "Ensi-ilta": "27.3.2019" },
+        { "Näytöksiä": "9" },
+        { "Teatteri": "Manilla" },
+        { "Katsojia": "n. 1000" },
+        { "Produktiossa mukana": "107" }
+      ],
+      "generateText": true,
+      "text": [
+        "Mystisessä Kiinassa vallitsee kurjuus ja epätoivo. Raakalaismaiset barbaarit kylvävät tuhoa kaikkialla missä kulkevat. Kovia kokenut, mutta päättäväinen nuorukainen Kim Mo on saanut barbaareista ja Kiinan kurjuudesta tarpeekseen. Hän uskoo voivansa tuhota barbaarit ja pelastaa Kiinan löytämällä kauan kadoksissa olleet legendaariset lohikäärmesisarukset. Näillä Kung Fu -mestareilla kerrotaan olevan mystisiä taikavoimia. Riittääkö yhden nuorukaisen päättäväisyys korjaamaan menneisyyden virheet?",
+        "Historian viidennessä HybridiSpeksissä matkattiin mystisen Kung Fun maailmaan. Viimeinen lohikäärmeisku tarjoili näyttäviä taisteluita, karismaattisia hahmoja, höyryäviä kylpyjä, koskettavaa romantiikkaa ja monipuolisia musiikkinumeroita!"
+      ],
+      "images": 60,
+      "resources": [
+        {
+          "title": "Käsiohjelma",
+          "url": "images/db/2019/viimeinen_kasiohjelma.pdf"
+        },
+        {
+          "title": "Rekryvideo",
+          "url": "https://www.youtube.com/watch?v=Xlpb4TZ-OYw"
+        },
+        {
+          "title": "Teaseri",
+          "url": "https://www.youtube.com/watch?v=fmCjxaopc-E"
+        },
+        {
+          "title": "Traileri",
+          "url": "https://www.youtube.com/watch?v=RRqUhaG_E9s"
+        },
+        {
+          "title": "Ensi-iltatraileri",
+          "url": "https://www.youtube.com/watch?v=3R5D5axdvm8"
+        }
+      ],
+      "colors": {
+        "bg1": "#c4a1b7",
+        "bg2": "#c4d7c3",
+        "button": "#c4d7c3"
+      }
+    },
+    {
+      "id": "avaruusristeily",
+      "name": "2101: Avaruusristeily",
+      "year": 2020,
+      "poster": "2020_1_thumb.jpg",
+      "banner": "avaruus_banner.jpg",
+      "statistics": [
+        { "Ensi-ilta": "25.3.2020/15.9.2020 " },
+        { "Näytöksiä": "9/5" },
+        { "Teatteri": "Manilla/Sigyn" },
+        { "Katsojia": "0?" },
+        { "Produktiossa mukana": "111" }
+      ],
+      "generateText": true,
+      "text": [
+        "On vuosi 2101. Moni asia on aikojen saatossa muuttunut, mutta ihmisten risteilyinto on säilynyt ennallaan. Kuivunut Itämeri ajaa risteilynjanoisen kansan kohti viimeistä Tuntematonta — AVARUUTTA!",
+        "Uljas avaruusristeilijä S/S Sisyfos matkaa aurinkokuntaa ympäri. Aluksen matkustajien keskittyessä olennaiseen, väsymätön tekoäly SILJA huolehtii robottimiehistönsä kanssa matkan onnistumisesta.",
+        "Tähtikoodiakatemian kouluttama Tarmo Erkale valmistautuu elämänsä suurinpaan muutokseen: avioliittoon. Ensin Tarmon on kuitenkin haettava perspektiiviä elämäänsä ja koettava POLTTARIRISTEILY...",
+        "Hyvät matkustajat, bästa passagerare, tervetuloa kyytiin."
+      ],
+      "images": 60,
+      "resources": [
+        {
+          "title": "Teaseri",
+          "url": "https://www.youtube.com/watch?v=nQqhkyH5Tbk"
+        },
+        {
+          "title": "Traileri",
+          "url": "https://www.youtube.com/watch?v=rtUkmookmh8"
+        }
+      ],
+      "colors": {
+        "bg1": "#3e2665",
+        "bg2": "#d943df",
+        "button": "#7efffd"
+      }
+    },
+    {
+      "id": "inferno",
+      "name": "Inferno - Kunnes Kadotus meidät korjaa",
+      "year": 2022,
+      "poster": "2022_1_thumb.jpg",
+      "banner": "inferno_banner.jpg",
+      "statistics": [
+        { "Ensi-ilta": "27.3.2022" },
+        { "Näytöksiä": "6" },
+        { "Teatteri": "Manilla" },
+        { "Katsojia": "780" },
+        { "Produktiossa mukana": "114" }
+      ],
+      "generateText": true,
+      "text": [
+        "Fantastinen seurueemme koostuu soturista, velhosta, varkaasta ja noidasta, jotka ovat kokeneet mitä eeppisimpiä taisteluita ja tehneet mitä mahtavimpia urotöitä. He ovat pelastaneet kyliä tulvilta, tukahduttaneet tulivuoria ja kohdanneet arkkivihollisensa Paha Velho Zargothraxin. Useaan otteeseen. Mutta retkueemme ei vielä tiedäkkään että suurimmat haasteet ovat vasta edessä. Sankarimme löytävät itsensä Helvetistä ja ymmärtävät, ettei Paholaista päihitetä pelkillä miekoilla ja loitsuilla.",
+        "Minkälaisia olentoja Helvetissä oikein asustaa? Voiko kadotettua vielä pelastaa? Millainen sielu Helvetistä voi palata?",
+        "Ken speksiin käy, saa kaiken toivon heittää."
+      ],
+      "images": 60,
+      "resources": [
+        {
+          "title": "Käsiohjelma",
+          "url": "images/db/2022/inferno_kasiohjelma.pdf"
+        },
+        {
+          "title": "Teaseri",
+          "url": "https://www.youtube.com/watch?v=uOijMBuS_lQ"
+        },
+        {
+          "title": "Ensi-iltatraileri",
+          "url": "https://www.youtube.com/watch?v=OkcYw1cc80Y"
+        }
+      ],
+      "colors": {
+        "bg1": "#9b2d2c",
+        "bg2": "#dbbc57",
+        "button": "#9b2d2c",
+        "buttonColor": "#dbbc57"
+      }
+    }
+  
+  
+  ]
+  
