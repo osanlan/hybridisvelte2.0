@@ -55,11 +55,10 @@
 					animation: spin 4s linear 0s normal infinite;
 					-moz-animation: 4s linear 0s normal none infinite spin;
 					-webkit-animation: spin 4s linear 0s normal infinite;
-					// z-index: 2;
 				}
 			}
 			img {
-				// z-index: 1;
+				z-index: 1; //importanta
 				height: 25vw;
 				-webkit-touch-callout: none;
 				-webkit-user-select: none;
@@ -71,11 +70,6 @@
 			img.text {
 				position: absolute;
 				&:not(:hover) + .spin {
-					animation-play-state: running;
-					-webkit-animation-play-state: running;
-					-moz-animation-play-state: running;
-				}
-				&:hover + .spin.bow {
 					animation-play-state: running;
 					-webkit-animation-play-state: running;
 					-moz-animation-play-state: running;

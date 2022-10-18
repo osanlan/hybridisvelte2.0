@@ -60,13 +60,16 @@
 	header {
 		z-index: 99;
 		display: flex;
-		justify-content: space-between;	
+		justify-content: center;	
 		.corner {
+			position: absolute;
 			width: 3em;
 			height: 3em;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			background-color: aqua;
+			left: 0;
 			a {
 				display: flex;
 				align-items: center;
@@ -143,6 +146,9 @@
 
 
 	.logged {
+		position: absolute;
+		right: 0;
+		height: 3em;
 		background-color: aliceblue;
 	}
 </style>
