@@ -12,4 +12,7 @@
     <img src="{src}" alt="{alt}" on:error="{() => getDefault()}"/>
     
     <style lang="scss">
+        img {
+            pointer-events: none;
+        }
     </style>
