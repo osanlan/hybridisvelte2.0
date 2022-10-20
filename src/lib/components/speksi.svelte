@@ -61,8 +61,6 @@
             @media only screen and (max-width:850px) {
                 width: 90%;
                 margin: 15px;
-
-                
             }
             h2 {
                 text-transform: uppercase;
@@ -75,6 +73,9 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 max-width: 80%;
+                @media only screen and (max-width:850px) {
+                flex-direction: column;
+            }
                 li {
                     padding: 0 10px;
                     p {

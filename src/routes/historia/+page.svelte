@@ -108,8 +108,11 @@
 <style lang="scss">
     .wrap {
         margin: 0 10vw;
-        @media only screen and (max-width:400px) {
+        @media only screen and (max-width:800px) {
             margin: 0 5vw;
+        }
+        @media only screen and (max-width:600px) {
+            margin: 0;
         }
     }
     ul.grid {
@@ -119,9 +122,16 @@
         gap: 1rem;
         grid-auto-flow: dense; /* 'dense' packing fills in holes earlier in the grid. */
         grid-template-columns: repeat(auto-fit, 240px); /* 'auto-fit' grid columns, so no media queries required. */
+        @media only screen and (max-width:600px) {
+            grid-template-columns: 100px 240px 100px;
+        }
         justify-content: center;
         li {
             list-style: none;
+            grid-column-start: auto;
+            @media only screen and (max-width:600px) {
+                grid-column-start: 2;
+            }
             &.poster {
                 button {
                     background-repeat: no-repeat;
