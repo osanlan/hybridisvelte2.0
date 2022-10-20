@@ -92,75 +92,71 @@
     <ul class="grid">
         {#each speksit as speksi}
         <li class="poster">
+            <!-- <Image src="./db/{speksi.year}/{speksi.poster}" alt=""  /> -->
             <button type="button" data-quick-view style="
-            background-image: url(./db/{speksi.year}/{speksi.poster});
-            background-size: cover;
-            width: 100%;
-            height: 300px">
-
-                <!-- <Image src="./db/{speksi.year}/{speksi.poster}" alt=""  /> -->
+                background-image: url(./db/{speksi.year}/{speksi.poster});">
             </button>            
-
         </li>
         <li class="fullwidth is-hidden" id="quickview-{speksi.year}">
-            <button type="button" data-close>Close 2</button>
-            <p>fullwidth {speksi.year}</p>
-            <p>This grid item needs to stretch the full width of the page,
-                and force other grid items to reflow around it,
-                whilst remaining "visually connected" to the preceeding grid item.</p>
+            <!-- <button type="button" data-close>Close 2</button> -->
+            <Speksi {speksi}/>
         </li>
         {/each}
     </ul>
 </section>
 
 <style lang="scss">
-    ul[class] {
+    .wrap {
+        margin: 0 10vw;
+        @media only screen and (max-width:400px) {
+            margin: 0 5vw;
+        }
+    }
+    ul.grid {
         margin: 0;
         padding: 0;
-    }
+        display: grid;
+        gap: 1rem;
+        grid-auto-flow: dense; /* 'dense' packing fills in holes earlier in the grid. */
+        grid-template-columns: repeat(auto-fit, 240px); /* 'auto-fit' grid columns, so no media queries required. */
+        justify-content: center;
+        li {
+            list-style: none;
+            &.poster {
+                button {
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 100%;
+                    height: 350px;
 
-    ul[class] li {
-        list-style: none;
-    }
-
-    ul[class] li > * {
-        margin: 1rem;
+                }
+            }
+            &.fullwidth {
+                grid-column: 1 / -1; /* Make fullwidth card span all grid columns. */
+                background: wheat;
+            }
+            &.is-hidden {
+                display: none;
+            }
+            &.is-selected {
+                button {
+                    transition: all 200ms ease-in;
+                    transform: scale(1.05);
+                }
+            }
+        }
     }
 
     :focus {
-        box-shadow: 0 0 0 0.25rem rebeccapurple;
+        box-shadow: 0 0 0 0.25rem grey;
         outline: 0;
     }
-
-    /* [1] 'auto-fit' grid columns, so no media queries required. */
-    /* [2] 'dense' packing fills in holes earlier in the grid. */
-    .grid {
-        display: grid;
-        gap: 1rem;
-        grid-auto-flow: dense; /* [2] */
-        grid-template-columns: repeat(auto-fit, 20rem); /* [1] */
-        justify-content: center;
-    }
-
     .grid > * {
-        align-items: flex-start;
-        background: rgb(211, 126, 126);
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+        // align-items: flex-start;
+        // background: rgb(211, 126, 126);
+        // display: flex;
+        // flex-direction: column;
+        // height: 100%;
     }
 
-    /* [3] Make fullwidth card span all grid columns. */
-    .fullwidth {
-        grid-column: 1 / -1;
-    }
-
-    .is-hidden {
-        display: none;
-    }
-
-    .fullwidth,
-    .is-selected {
-        background: wheat;
-    }
 </style>
