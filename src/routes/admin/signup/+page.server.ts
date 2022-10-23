@@ -1,27 +1,26 @@
-import type { Actions } from "@sveltejs/kit";
-import { invalid, redirect } from "@sveltejs/kit";
+import { invalid, redirect, type Actions } from "@sveltejs/kit";
 import { auth } from "$lib/server/lucia";
-import { setCookie } from "lucia-sveltekit";
 
 export const actions: Actions = {
-    default: async ({ cookies, request }) => {
+    default: async ({ request, locals }) => {
         const form = await request.formData();
-        const email = form.get("email")?.toString() || ""; 
-        const password = form.get("password")?.toString() || "";
-        if (!email || !password) {
-            return invalid(400, {
-                message: "Missing input",
-            });
-        }
+        const username = form.get("username"); 
+        const password = form.get("password");
+        
+        if (!username || !password ||
+            typeof username !== "string" || 
+            typeof password !== "string"
+        ) return invalid(400);
 
         try {
-            const userSession = await auth.createUser("email", email, {
+            const user = await auth.createUser("username", username, {
                 password,
-                user_data: {
-                    email,
-                },
+                attributes: {
+                    username, 
+                }
             });
-            setCookie(cookies, ...userSession.cookies);
+            const session = await auth.createSession(user.userId);
+            locals.setSession(session);
             throw redirect(302, "/");
         } catch (e) {
             const error = e as Error;
@@ -35,7 +34,9 @@ export const actions: Actions = {
             }
             return invalid(400, {
                 message: "Unknown error",
+                message2: error.message
             });
         }
+        throw redirect(302, "/");
     },
 };

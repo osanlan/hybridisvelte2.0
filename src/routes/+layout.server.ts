@@ -1,2 +1,4 @@
 import { auth } from '$lib/server/lucia';
-export const load = auth.handleServerSession();
+import type { LayoutServerLoad } from './$types';
+
+export const load: LayoutServerLoad = auth.handleServerSession();

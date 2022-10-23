@@ -9,4 +9,12 @@ export const auth = lucia({
     adapter: prisma(client),
     secret: "ogoXhnT2wnmALCGsvU7jE3wk2Wwk2FmDSG",
     env: dev ? "DEV" : "PROD",
+    transformUserData: (userData) => {
+        return {
+            userId: userData.id,
+            username: userData.username,
+        }
+    }
 });
+
+export type Auth = typeof auth;

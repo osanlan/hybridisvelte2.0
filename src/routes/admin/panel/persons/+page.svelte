@@ -1,5 +1,4 @@
 <script>
-    import { getSession } from "lucia-sveltekit/client";
     /** @type {import('./$types').PageData} */
     export let data;
 
@@ -14,13 +13,7 @@ console.log(hallitus);
     $: disable_create = (name=="" || title=="" )
     $: disable_delete = (id == "")
 
-    const session = getSession();
-    let admin = false;
-    if ($session) {
-        admin = ($session.user.role == "ADMIN")
-    }
 </script>
-{#if (admin)}
 <form method="GET">
     <input type="hidden" name="operation" bind:value={op}>
     <input type="hidden" name="id" bind:value={id}>
@@ -69,9 +62,6 @@ console.log(hallitus);
     
 {/each}
 <div>{message}</div>
-{:else}
-<h3>Höhö et oo admin!</h3>
-{/if}
 
 
 <style lang="scss">

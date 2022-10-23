@@ -1,10 +1,7 @@
 <script lang="ts">
-  import Header from "$lib/common/Header.svelte";
-  import Footer from "$lib/common/Footer.svelte";
-  import { handleSilentRefresh } from "lucia-sveltekit/client";
-  import "../app.scss";
-
-  handleSilentRefresh();
+    import Header from "$lib/common/Header.svelte";
+    import Footer from "$lib/common/Footer.svelte";
+    import "../app.scss";
 </script>
 
 <Header />

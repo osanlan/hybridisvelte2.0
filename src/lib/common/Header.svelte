@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { getSession } from "lucia-sveltekit/client";
+	import { getUser } from "lucia-sveltekit/client";
 
-	const session = getSession();
+	const user = getUser();
 </script>
 
 <header>
@@ -40,7 +40,7 @@
 	</nav>
 
 	<div class="logged">
-		{#if ($session == null)}
+		{#if (user == null)}
 		<nav data-sveltekit-prefetch>
 			<ul>
 				<li class:active={$page.url.pathname.includes('/admin')}>
@@ -49,7 +49,8 @@
 			</ul>
 		</nav>
 		{:else}
-			logged in as {$session.user.email}
+
+			logged in as {user.username}
 			<a href="/admin/logout">Logout</a>
 		{/if}
 

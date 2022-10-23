@@ -1,9 +1,10 @@
 <script lang="ts">
-  import { getSession } from 'lucia-sveltekit/client';
+  import { getUser } from 'lucia-sveltekit/client';
 
-  const session = getSession();
+  const user = getUser();
+
   let authed = false;
-  if ($session) {
+  if (user) {
     authed = true;
   }
 </script>

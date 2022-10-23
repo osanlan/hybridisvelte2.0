@@ -1,12 +1,17 @@
-import { error, redirect } from '@sveltejs/kit';
+import { redirect } from '@sveltejs/kit';
 import type { Person } from '../../../api';
 import { Prisma  } from '@prisma/client'
 import prisma from '../../../api';
+import { getUser } from 'lucia-sveltekit/client';
+
 
 const emptyPerson: Person[] = []
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ url }) {
+    // const user = await getUser();
+    // if (!user) throw redirect(302, "/admin/login");
+
     const s = url.searchParams
     let id = s.get("id")?.toString()??""
     let op = s.get("operation")?.toString()??""
