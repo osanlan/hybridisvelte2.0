@@ -26,6 +26,7 @@
     "@fontsource/fira-mono": "^4.5.0",
     "@lucia-sveltekit/adapter-prisma": "^0.3.3",
     "@prisma/client": "^4.4.0",
+    "contentful": "^9.2.9",
     "lucia-sveltekit": "^0.9.1",
     "three": "^0.145.0"
   }
