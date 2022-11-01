@@ -11,9 +11,6 @@
 	</div>
 
 	<nav data-sveltekit-prefetch>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
 		<ul>
 			<li class:active={$page.url.pathname === '/'}>
 				<a href="/">HybridiSpeksi</a>
@@ -34,33 +31,15 @@
 				<a href="/yhteystiedot">Yhteystiedot</a>
 			</li>
 		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
 	</nav>
-
-	<div class="logged">
-		{#if ($session == null)}
-		<nav data-sveltekit-prefetch>
-			<ul>
-				<li class:active={$page.url.pathname.includes('/admin')}>
-					<a href="/admin">admin</a>
-				</li>
-			</ul>
-		</nav>
-		{:else}
-			logged in as {$session.user.email}
-			<a href="/admin/logout">Logout</a>
-		{/if}
-
-	</div>
 </header>
 
 <style lang="scss">
 	header {
 		z-index: 99;
 		display: flex;
-		justify-content: center;	
+		justify-content: center;
+        background-color: $color-nav;
 		.corner {
 			position: absolute;
 			width: 3em;
@@ -68,7 +47,6 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			background-color: aqua;
 			left: 0;
 			a {
 				display: flex;
@@ -78,23 +56,17 @@
 				height: 100%;
 			}
 			img {
-				width: 2em;
-				height: 2em;
+				width: 3em;
+				height: 3em;
 				object-fit: contain;
+                -webkit-filter: invert(1);
+                filter: invert(1)
 			}
 		}
 		nav {
 			display: flex;
 			justify-content: center;
-			--background: rgba(255, 255, 255, 0.7);
-			svg {
-				width: 2em;
-				height: 3em;
-				display: block;
-				path {
-					fill: var(--background);
-				}
-			}
+            background-color: $color-nav;
 			ul {
 				position: relative;
 				padding: 0;
@@ -104,7 +76,7 @@
 				justify-content: center;
 				align-items: center;
 				list-style: none;
-				background: var(--background);
+				background: $color-nav;
 				background-size: contain;
 				@media only screen and (max-width: 400px) {
 					flex-direction: column;
@@ -121,8 +93,11 @@
 						top: 0;
 						left: calc(50% - var(--size));
 						border: var(--size) solid transparent;
-						border-top: var(--size) solid var(--accent-color);
+						border-top: var(--size) solid black;
 					}
+                    & > a:hover {
+                        background-color: $color-nav-font-hover;
+                    }
 				}
 			}
 			a {
@@ -130,25 +105,17 @@
 				height: 100%;
 				align-items: center;
 				padding: 0 1em;
-				color: var(--heading-color);
 				font-weight: 700;
 				font-size: 0.8rem;
 				text-transform: uppercase;
 				letter-spacing: 0.1em;
 				text-decoration: none;
 				transition: color 0.2s linear;
+                color: $color-nav-font;
 				&:hover {
 					color: var(--accent-color);
 				}
 			}
 		}
-	}
-
-
-	.logged {
-		position: absolute;
-		right: 0;
-		height: 3em;
-		background-color: aliceblue;
 	}
 </style>
