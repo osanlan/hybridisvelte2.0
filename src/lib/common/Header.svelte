@@ -36,29 +36,6 @@
 		display: flex;
 		justify-content: center;
         background-color: $color-nav;
-		.corner {
-			position: absolute;
-			width: 3em;
-			height: 3em;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			left: 0;
-			a {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: 100%;
-				height: 100%;
-			}
-			img {
-				width: 3em;
-				height: 3em;
-				object-fit: contain;
-                -webkit-filter: invert(1);
-                filter: invert(1)
-			}
-		}
 		nav {
 			display: flex;
 			justify-content: center;
