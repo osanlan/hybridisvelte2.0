@@ -2,16 +2,12 @@
     import Header from "$lib/common/Header.svelte";
     import Footer from "$lib/common/Footer.svelte";
     import "../app.scss";
-
-
 </script>
 
 <Header />
-
 <main>
     <slot />
 </main>
-
 <Footer />
 
 <style>
@@ -24,5 +20,4 @@ main {
     margin: 0 auto;
     box-sizing: border-box;
 }
-
 </style>
