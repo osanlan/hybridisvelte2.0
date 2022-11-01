@@ -37,29 +37,20 @@
 </section>
 
 <style lang="scss">
-    $grad: linear-gradient(
-      to right,
-      rgba(14, 14, 14, 0.9),
-      rgba(60, 28, 23, 0.9),
-      rgba(14, 14, 14, 0.9)
-    );
     section {
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: gold;
-      background-image: $grad;
-      margin-top: auto;
-      bottom: 0;
-      
-      .icon {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: gold;
+        background: black;
+        margin-top: auto;
+        bottom: 0;  
+    .icon {
         width: 4.5rem;
         height: 4.5rem;
         margin: 0.7rem;
-  
         fill: silver;
-      }
+        }
     }
-  </style>
-  
+</style>

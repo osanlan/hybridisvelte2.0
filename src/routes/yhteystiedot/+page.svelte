@@ -1,28 +1,17 @@
-<script>
-    /** @type {import('./$types').PageData} */
+<script lang="ts">
     export let data;
-
-    let groups = data.persons
-    let hallitus = groups.filter(g => g.group == "HALLITUS");
-    let tuottis = groups.filter(g => g.group == "TUOTANTOTIIMI");
-    console.log(groups)
-    console.log(hallitus)
+    let org = data.body.org.items[0].fields.data;
+    console.log(org)
 </script>
 <h2>HALLITUS</h2>
-<table>
-    {#each hallitus as p}
-    <tr>
-        <td>{p.name}</td>
-        <td>{p.title}</td>
-    </tr>
-    {/each}
-</table>    
-<h2>TUOTANTOTIIMI</h2>
-<table>
-    {#each tuottis as p}
-    <tr>
-        <td>{p.name}</td>
-        <td>{p.title}</td>
-    </tr>
+<table class="row">
+    {#each org as group}
+    <h2>{group.tableName}</h2>
+        {#each group.people as person}
+        <tr>
+            <td>{person.name}</td>
+            <td>{person.title}</td>
+        </tr>
+        {/each}
     {/each}
 </table>

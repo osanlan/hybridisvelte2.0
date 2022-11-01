@@ -28,6 +28,8 @@ body {
     var(--secondary-color) 10.45%,
     var(--tertiary-color) 41.35%
   );
+  background: linear-gradient(#f8f8f8, #bbbbbb, #8a8a8a 100%);
+
 }
 
 body::before {

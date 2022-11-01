@@ -1,16 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { getSession } from "lucia-sveltekit/client";
 
-	const session = getSession();
+    let mobile = false;
+    const handleMobileClick = () => (mobile = !mobile);
 </script>
 
 <header>
-	<div class="corner">
-		<img src="/logo.png" alt=""/>
-	</div>
-
-	<nav data-sveltekit-prefetch>
+	<nav>
 		<ul>
 			<li class:active={$page.url.pathname === '/'}>
 				<a href="/">HybridiSpeksi</a>
@@ -36,7 +32,7 @@
 
 <style lang="scss">
 	header {
-		z-index: 99;
+		z-index: 10;
 		display: flex;
 		justify-content: center;
         background-color: $color-nav;
@@ -96,7 +92,7 @@
 						border-top: var(--size) solid black;
 					}
                     & > a:hover {
-                        background-color: $color-nav-font-hover;
+                        background-color: $color-nav-bar-hover;
                     }
 				}
 			}
@@ -113,7 +109,7 @@
 				transition: color 0.2s linear;
                 color: $color-nav-font;
 				&:hover {
-					color: var(--accent-color);
+					color: $color-nav-font-hover;
 				}
 			}
 		}

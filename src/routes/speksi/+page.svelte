@@ -1,10 +1,3 @@
-<script lang="ts">
-    import type { PageData } from "./$types";
-    export let data: PageData;
-    console.log(data);
-    let text = data.content[0];
-</script>
-
 <svelte:head>
     <title>Speksi</title>
     <meta name="description" content="Speksistä ja HybridiSpeksistä" />
@@ -75,19 +68,15 @@
             </div>
         </div>
     </div>
-    <div class="img">
-        <img src="./db/2018/2018_3.jpg" alt="" />
-    </div>
 </section>
 
 
 <style lang="scss">
-    p {
-
-    }
     h2 {
-        color: green;
+        color: rgb(83, 83, 83);
         font-size: large;
+        font-weight: 700;
+            text-align: center;
     }
     section.wrap {
         display: flex;
@@ -95,11 +84,21 @@
         justify-content: center;
         align-items: center;
         .text {
-            color: red;
+            max-width: 50vw;
+            text-align: justify;
         }
-        .img {
+        img {
+            width: 30vw;
+        }
+        @media only screen and (max-width: 767px) {
+            .text {
+                max-width: 95vw;
+            }
+            p {
+                font-size: 1rem;
+            }
             img {
-                max-width: 65vw;
+                width: 60vw;
             }
         }
     }
@@ -107,6 +106,7 @@
         display: flex;
         flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
         a {
             display: flex;
             flex-direction: column;

@@ -25,10 +25,6 @@
 
 
 <style lang="scss">
-	body {
-		background-color: black!important;
-
-	}
 	section {
 		max-height: 700px;
 		display: flex;
@@ -76,6 +72,10 @@
 				}
 			}
 		}
+
+        p {
+            color: gold;
+        }
 	}
 
 	@keyframes spin {

@@ -1,30 +1,28 @@
 <script lang="ts">
-  import Header from "$lib/common/Header.svelte";
-  import Footer from "$lib/common/Footer.svelte";
-  import { handleSilentRefresh } from "lucia-sveltekit/client";
-  import "../app.scss";
+    import Header from "$lib/common/Header.svelte";
+    import Footer from "$lib/common/Footer.svelte";
+    import "../app.scss";
 
-  handleSilentRefresh();
+
 </script>
 
 <Header />
 
 <main>
-  <slot />
+    <slot />
 </main>
 
 <Footer />
 
 <style>
-  main {
+main {
     flex: 1;
     display: flex;
     flex-direction: column;
     padding: 1rem;
     width: 100%;
-    /* max-width: 1024px; */
     margin: 0 auto;
     box-sizing: border-box;
-  }
+}
 
 </style>
