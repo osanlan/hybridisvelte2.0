@@ -11,7 +11,7 @@
 
 {#if (year)}
 <div class="container" style="--bg1: {speksi.colors?.bg1}; --bg2: {speksi.colors?.bg2}"
-    transition:slide="{{duration: 1000}}" >
+    transition:slide="{{duration: 1000}}">
     <div class="speksi" style="--bg1: {speksi.colors?.bg1}; --bg2: {speksi.colors?.bg2}">
         <Image {src} alt=""/>
         <h2>{speksi.name}</h2>
@@ -37,30 +37,39 @@
 <style lang="scss">
     .container {
         font-family: 'Red Hat Display', sans-serif;
-        // margin-top: 10px;
         display: flex;
         width: 100%;
-        justify-content: center;
+        justify-content: center;                     
         background-image: linear-gradient(to right, var(--bg1), var(--bg2), var(--bg1));
-        border-radius: 10px;
+        // border-radius: 10px;
         @media only screen and (max-width:850px) {
-                border-radius: 0;   
-            }
+            border-radius: 0;   
+        }
+
         .speksi {
-            width: 60%;
+            width: 70%;
             flex-direction: column;
             max-width: 90%;
             text-align: center;
             background-color: white;
             margin: 5rem auto;
-            border-radius: 7px;
+            border-radius: 10px;
             > :global(img) {
-                border-radius: 7px 7px 0 0;
+                border-radius: 10px 10px 0 0;
                 width: 100%;
             }
             @media only screen and (max-width:850px) {
                 width: 90%;
                 margin: 15px;
+            }
+            @media only screen and (max-width:1300px) {
+                width: 100%;
+                max-width: 100%;
+                margin: 0;
+                border-radius: 0;
+                > :global(img) {
+                    border-radius: 0;
+                }
             }
             h2 {
                 text-transform: uppercase;
@@ -74,8 +83,8 @@
                 justify-content: center;
                 max-width: 80%;
                 @media only screen and (max-width:850px) {
-                flex-direction: column;
-            }
+                    flex-direction: column;
+                }
                 li {
                     padding: 0 10px;
                     p {

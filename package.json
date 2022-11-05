@@ -13,7 +13,7 @@
     "@sveltejs/kit": "1.0.0-next.516",
     "@types/cookie": "^0.5.1",
     "sass": "^1.53.0",
-    "svelte": "^3.46.0",
+    "svelte": "^3.52.0",
     "svelte-check": "^2.7.1",
     "svelte-preprocess": "^4.10.7",
     "tslib": "^2.3.1",
@@ -26,6 +26,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "contentful": "^9.2.9",
     "svelte-fa": "^3.0.3",
+    "sveltestrap": "^5.10.0",
     "three": "^0.145.0"
   }
 }

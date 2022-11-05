@@ -122,10 +122,10 @@
         gap: 1rem;
         grid-auto-flow: dense; /* 'dense' packing fills in holes earlier in the grid. */
         grid-template-columns: repeat(auto-fit, 240px); /* 'auto-fit' grid columns, so no media queries required. */
+        justify-content: center;
         @media only screen and (max-width:600px) {
             grid-template-columns: 100px 240px 100px;
         }
-        justify-content: center;
         li {
             list-style: none;
             grid-column-start: auto;
@@ -134,16 +134,20 @@
             }
             &.poster {
                 button {
+                    all: unset;
                     background-repeat: no-repeat;
                     background-size: cover;
                     width: 100%;
                     height: 350px;
-
+                }
+                :focus {
+                    box-shadow: 0 0 0 0.25rem grey;
+                    outline: 0;
                 }
             }
             &.fullwidth {
                 grid-column: 1 / -1; /* Make fullwidth card span all grid columns. */
-                background: wheat;
+                // background: wheat;
             }
             &.is-hidden {
                 display: none;
@@ -157,16 +161,6 @@
         }
     }
 
-    :focus {
-        box-shadow: 0 0 0 0.25rem grey;
-        outline: 0;
-    }
-    .grid > * {
-        // align-items: flex-start;
-        // background: rgb(211, 126, 126);
-        // display: flex;
-        // flex-direction: column;
-        // height: 100%;
-    }
+
 
 </style>
