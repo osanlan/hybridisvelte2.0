@@ -4,7 +4,7 @@
 </svelte:head>
 
 <section class="wrap">
-    <img src="./logo.png" alt="" />
+    <img class="logo" src="./logo.png" alt="" />
     <div class="text">
         <p>
             HybridiSpeksi on Turun yliopiston luonnontieteiden ja tekniikan
@@ -43,11 +43,11 @@
             <div class="speksit">
                 <a href="https://spex.abo.fi/">
                     <img src="./logos/speksit/abospex.svg" alt="Akademiska Spexet"/>
-                    <h3>Akademiska Spexet</h3>
+                    <h3>Akademiska<br>Spexet</h3>
                 </a>
                 <a href="http://turkulainenhumanistispeksi.fi/">
                     <img src="./logos/speksit/humanisti.svg" alt="Turkulainen humanistispeksi"/>
-                    <h3>Turku&shy;lainen huma&shy;nisti&shy;speksi</h3>
+                    <h3>Turkulainen<br>humanistispeksi</h3>
                 </a>
                 <a href="https://iospeksi.fi/">
                     <img src="./logos/speksit/io.svg" alt="I/O Speksi"/>
@@ -78,6 +78,9 @@
         font-weight: 700;
             text-align: center;
     }
+    h3 {
+        text-align: center;
+    }
     section.wrap {
         display: flex;
         flex-direction: column;
@@ -87,7 +90,7 @@
             max-width: 50vw;
             text-align: justify;
         }
-        img {
+        .logo {
             width: 30vw;
         }
         @media only screen and (max-width: 767px) {
@@ -97,7 +100,7 @@
             p {
                 font-size: 1rem;
             }
-            img {
+            .logo {
                 width: 60vw;
             }
         }
@@ -115,7 +118,7 @@
             padding: 20px;
         }
         img {
-            width: 200px;
+            width: 150px;
         }
     }
 </style>

@@ -36,3 +36,7 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+
+## if popperjs is beign a lil bitch
+Adding "type": "module" to node_modules/@popperjs/core/package.json does work

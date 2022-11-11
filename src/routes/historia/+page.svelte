@@ -1,8 +1,6 @@
 <script>
     import speksit from '$lib/data/speksit.json';
-    import Image from '$lib/components/image.svelte';
     import Speksi from '$lib/components/speksi.svelte';
-    import { scale } from 'svelte/transition';
     import { onMount } from 'svelte';
 
     let root;

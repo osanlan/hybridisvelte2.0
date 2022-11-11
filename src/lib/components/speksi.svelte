@@ -72,8 +72,11 @@
                 }
             }
             h2 {
+                margin: 20px auto;
+                width: 70%;
                 text-transform: uppercase;
                 color: var(--bg1);
+                text-align: center;
             }
             .stats {
                 list-style-type: none;
@@ -110,10 +113,10 @@
                     transition: all 0.3s;
                     box-shadow: 0px 2px 5px #484848;
                     color: var(--buttonColor);
-                    width: 7rem;
-                    span {
-                        margin: 1px;
-                    }
+                    // width: 7rem;
+                    // span {
+                    //     margin: 1px;
+                    // }
                     &:hover {
                         transform: scale(1.05);
                         box-shadow: 0px 2px 9px #484848;
