@@ -42,15 +42,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: gold;
-        background: black;
+        color: $color-nav-font;
+        background: $color-nav;
         margin-top: auto;
         bottom: 0;  
     .icon {
         width: 4.5rem;
         height: 4.5rem;
         margin: 0.7rem;
-        fill: silver;
+        fill: $color-nav-icon;
         }
     }
 </style>

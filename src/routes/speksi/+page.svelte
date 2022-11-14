@@ -116,6 +116,7 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
+            text-decoration: none;
         }
         img {
             width: 150px;

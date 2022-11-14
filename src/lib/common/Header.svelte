@@ -16,7 +16,8 @@
         isOpen = e.detail.isOpen;
     }
 </script>
-<Navbar color="light" light expand="md">
+
+<Navbar light expand="md">
     <NavbarBrand href="/">HybridiSpeksi</NavbarBrand>
     <NavbarToggler on:click={() => (isOpen = !isOpen)} />
     <Collapse {isOpen} navbar expand="md" on:update={handleUpdate}>
@@ -32,7 +33,21 @@
     </Collapse>
 </Navbar>
 
-
 <style lang="scss">
+    :global(.navbar) {
+        background-color: $color-nav;
+    }
+     :global(.navbar-brand) {
+            color: $color-nav-font;
+    }
+    :global(.nav-link) {
+        color: $color-nav-font;
+        &:hover {
+            background-color: $color-nav-bar-hover;
+            color: $color-nav-font-hover;
+        }
+    }
+    
+
 
 </style>
