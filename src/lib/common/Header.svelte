@@ -1,5 +1,5 @@
 <script>
-	// import { page } from '$app/stores';
+	import './nav.scss';
     import {     
         Collapse,
         Navbar,
@@ -33,21 +33,3 @@
     </Collapse>
 </Navbar>
 
-<style lang="scss">
-    :global(.navbar) {
-        background-color: $color-nav;
-    }
-     :global(.navbar-brand) {
-            color: $color-nav-font;
-    }
-    :global(.nav-link) {
-        color: $color-nav-font;
-        &:hover {
-            background-color: $color-nav-bar-hover;
-            color: $color-nav-font-hover;
-        }
-    }
-    
-
-
-</style>

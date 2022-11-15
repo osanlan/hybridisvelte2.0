@@ -104,6 +104,7 @@
 </section>
 
 <style lang="scss">
+    
     .wrap {
         margin: 0 10vw;
         @media only screen and (max-width:800px) {

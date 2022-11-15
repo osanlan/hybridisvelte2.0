@@ -1,0 +1,27 @@
+@import "../../variables.scss";
+// :global(.navbar) {
+//     background-color: $color-nav;
+// }
+// :global(.navbar-brand) {
+//         color: $color-nav-font;
+// }
+// :global(.nav-link) {
+//     color: $color-nav-font;
+//     &:hover {
+//         background-color: $color-nav-bar-hover;
+//         color: $color-nav-font-hover;
+//     }
+// }
+.navbar{
+    background-color: $color-nav;
+}
+.navbar-brand {
+        color: $color-nav-font;
+}
+.nav-link {
+    color: $color-nav-font;
+    &:hover {
+        background-color: $color-nav-bar-hover;
+        color: $color-nav-font-hover;
+    }
+}

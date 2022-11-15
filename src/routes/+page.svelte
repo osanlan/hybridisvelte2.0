@@ -26,7 +26,7 @@
 
 <style lang="scss">
 	section {
-		max-height: 700px;
+		max-height: 750px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -39,7 +39,7 @@
 			align-items: center;
 			position: relative;
 			width: 100%;
-			height: 70vh;
+			height: 80vh;
 			.spin {
 				animation: spin 2s linear 0s infinite reverse;
 				-moz-animation: 2s linear 0s reverse none infinite spin;
