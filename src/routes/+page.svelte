@@ -8,7 +8,7 @@
 </svelte:head>
 
 
-<section>
+<section class="starfield">
 	<Stars />
 	<div class="welcome">
 		<img class="text" src="logo_text.png" alt="Welcome" draggable=false />
@@ -17,21 +17,24 @@
 			<img class="bow" src="logo_hourglass.png" alt="Welcome" draggable=false />
 		</div>
 	</div>
-
-	<p>
-		Näyttökset sit taas keväällä eiks jeh?!
+</section>
+<section>
+    <p>
+        Näyttökset sit taas keväällä eiks jeh?!
 	</p>
 </section>
 
-
 <style lang="scss">
 	section {
-		max-height: 750px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		overflow: hidden;
+        background-color: black;
+        &.starfield {
+            z-index: -1;
+        }
 		.welcome {
 			display: flex;
 			flex-direction: column;

@@ -10,13 +10,13 @@
 		scene = new THREE.Scene();
 		
       	//setup camera with facing upward
-		camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight, 1, 1000);
+		camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
 		camera.position.z = 1;
 		camera.rotation.x = Math.PI/2;
 		
 		//setup renderer
 		renderer = new THREE.WebGLRenderer();
-		renderer.setSize(window.innerWidth, window.innerHeight);
+		renderer.setSize(window.innerWidth-50, window.innerHeight);
 		container.appendChild(renderer.domElement);
 
         starGeo = new THREE.BufferGeometry();
@@ -58,12 +58,22 @@
 
 </script>
 
-<div id="stars" bind:this={container}></div>
+<div class="wrapper">
+    <div id="stars" bind:this={container}></div>
+</div>
 
 <style lang="scss">
-    div {
+    .wrapper {
+        // width: 100vw;
+        // display: flex;
         position: absolute;
-        overflow: visible;
         z-index: -1;
+        #stars {
+            flex: 1;
+            :global("> canvas") {
+                overflow-x: hidden;
+                display: inline-block;
+            }
+        }
     }
 </style>
