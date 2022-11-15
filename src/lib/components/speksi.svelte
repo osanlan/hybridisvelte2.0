@@ -1,11 +1,16 @@
 <script>
     import Image from '$lib/components/image.svelte';
-    import { scale, fade, slide } from 'svelte/transition';
+    import ImageLoader from '$lib/components/imageLoader.svelte';
+    import { slide } from 'svelte/transition';
 
     export let speksi;
 
     let src = "./db/" + speksi.year + "/" + speksi.banner
     let year = speksi.year;
+    let photos = [];
+    for (let i = 1; i < speksi.images; i++) {
+        photos.push(i+1);
+    }
 
 </script>
 
@@ -30,6 +35,11 @@
             </a>
             {/each}
         </div>
+        <div class="photos">
+            {#each photos as photo }
+            <ImageLoader class="photo" src="{'./db/' + speksi.year + '/' + speksi.year + '_' + photo + '_thumb.jpg'}" alt="kuva"></ImageLoader>
+            {/each}
+        </div>
     </div>
 </div>
 {/if}
@@ -41,7 +51,6 @@
         width: 100%;
         justify-content: center;                     
         background-image: linear-gradient(to right, var(--bg1), var(--bg2), var(--bg1));
-        // border-radius: 10px;
         @media only screen and (max-width:850px) {
             border-radius: 0;   
         }
@@ -124,6 +133,14 @@
                     }
                 }
             }
+
+            .photos {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
+
     }
 </style>
