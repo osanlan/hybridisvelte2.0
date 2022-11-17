@@ -1,6 +1,6 @@
 
 <script>
-	import Stars from '$lib/components/stars.svelte';
+	// import Stars from '$lib/components/stars.svelte';
 </script>
 <svelte:head>
 	<title>HybridiSpeksi</title>
@@ -9,7 +9,7 @@
 
 
 <section class="starfield">
-	<Stars />
+	<!-- <Stars /> -->
 	<div class="welcome">
 		<img class="text" src="logo_text.png" alt="Welcome" draggable=false />
 		<div class="spin">
