@@ -1,51 +1,22 @@
 <script>
+    import ContentfulRichText from "$lib/components/contentfulRichText.svelte";
     export let data;
-    console.log(data)
     // let pageData = data.body.org.items[0].fields.data;
-
+    let content = data.body.pageData.items[0].fields.content.content;
+    
+    console.log(content[0].content[0].value)
 </script>
 <svelte:head>
-    <title>Speksi</title>
+    <title>{data.body.pageData.items[0].fields.title}</title>
     <meta name="description" content="Speksistä ja HybridiSpeksistä" />
 </svelte:head>
 
 <section class="wrap">
     <img class="logo" src="./logo.png" alt="" />
     <div class="text">
-        <p>
-            HybridiSpeksi on Turun yliopiston luonnontieteiden ja tekniikan
-            opiskelijoiden vuosittain toteuttama teatteriproduktio. Ensimmäinen
-            HybridiSpeksi nähtiin keväällä 2015 Barker-teatterilla.
-        </p>
-        <h2>2022 - Jo seitsemäs HybridiSpeksi!</h2>
-        <p>
-            Koronavuosien takaiskujen myötä HybridiSpeksi nähdään taas lavalla keväällä
-            2022! Infernaaliseen seikkailutunnelmaan päästään, kun HybridiSpeksin
-            näytökset valtaavat speksiscenen jo seitsemmättä kertaa Turun historiassa.
-            HybridiSpeksi 2022 tuotanto- ja käsikirjoitustiimit valittiin jo kaudelle
-            2021 ja työt onkin aloitettu jo viime vuonna. Muutama tuotantotiimin paikka
-            on kuitenkin vielä auki, joten pysy kuulolla!
-        </p>
-        <p>
-            Aikaisempien vuosien HybridiSpekseihin voit tutustua <a href="historia">täältä</a>
-        </p>
-        <h2>Mikä on speksi?</h2>
-        <p>
-            Speksi on interaktiivista opiskelijateatteria. Siinä yhdistyvät
-            käsikirjoitettu teatteri, improvisaatio ja musikaali. Esityksissä yleisö voi
-            vaikuttaa muutoin käsikirjoitetun esityksen kulkuun huutamalla “Omstart”,
-            jolloin edellinen toiminta, repliikki tai musiikkinumero tehdään uudelleen
-            erilaisella tavalla improvisoiden. Lisää spekseistä ja niiden historiasta
-            voit lukea esimerkiksi <a href="https://fi.wikipedia.org/wiki/Speksi">Wikipediasta.</a>
-        </p>
-        <div>
-            <h2>Muut Turun speksit</h2>
-            <p>
-                Turussa opiskelijaelämä näkyy vahvasti paitsi katukuvassa, niin myös
-                kulttuurissa. HybridiSpeksi on vain yksi turkulaisten opiskelijoiden ja
-                opiskelijamielisten toteuttama teatteriproduktio. Yhteensä speksejä on
-                Turussa seitsemän.
-            </p>
+    {#each content as block}
+    <ContentfulRichText nodeType={block.nodeType}>{block.content[0].value}</ContentfulRichText>
+    {/each}
             <div class="speksit">
                 <a href="https://spex.abo.fi/">
                     <img src="./logos/speksit/abospex.svg" alt="Akademiska Spexet"/>
@@ -72,17 +43,17 @@
                     <h3>Tuky Speksi</h3>
                 </a>
             </div>
-        </div>
+        
     </div>
 </section>
 
 
 <style lang="scss">
-    h2 {
+    :global(h2) {
         color: rgb(83, 83, 83);
         font-size: large;
         font-weight: 700;
-            text-align: center;
+        text-align: center;
     }
     h3 {
         text-align: center;
@@ -101,9 +72,9 @@
         }
         @media only screen and (max-width: 767px) {
             .text {
-                max-width: 95vw;
+                max-width: 85vw;
             }
-            p {
+            :global(p) {
                 font-size: 1rem;
             }
             .logo {
