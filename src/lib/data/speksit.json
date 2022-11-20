@@ -253,7 +253,7 @@
         "Tähtikoodiakatemian kouluttama Tarmo Erkale valmistautuu elämänsä suurinpaan muutokseen: avioliittoon. Ensin Tarmon on kuitenkin haettava perspektiiviä elämäänsä ja koettava POLTTARIRISTEILY...",
         "Hyvät matkustajat, bästa passagerare, tervetuloa kyytiin."
       ],
-      "images": 60,
+      "images": 0,
       "resources": [
         {
           "title": "Teaseri",
@@ -289,7 +289,7 @@
         "Minkälaisia olentoja Helvetissä oikein asustaa? Voiko kadotettua vielä pelastaa? Millainen sielu Helvetistä voi palata?",
         "Ken speksiin käy, saa kaiken toivon heittää."
       ],
-      "images": 60,
+      "images": 0,
       "resources": [
         {
           "title": "Käsiohjelma",
@@ -310,6 +310,36 @@
         "button": "#9b2d2c",
         "buttonColor": "#dbbc57"
       }
+    },
+    {
+        "id": "kreivi",
+        "name": "Kreivin aikaan",
+        "year": 2023,
+        "poster": "kreivi_poster.jpg",
+        "banner": "kreivi_banner.jpg",
+        "statistics": [
+          { "Ensi-ilta": "TBA" },
+          { "Näytöksiä": "TBA" },
+          { "Teatteri": "TBA" },
+          { "Katsojia": "N/A" },
+          { "Produktiossa mukana": ">5" }
+        ],
+        "generateText": true,
+        "text": [
+            "Suomen Turussa eletään jännittäviä aikoja. Pitkä ja uuvuttava taisto Ruotsin kanssa on saatu päätökseen; välirauha on syntynyt ja Suomi on saavuttanut itsenäisyytensä. Poliittinen ilmapiiri on kuitenkin kireä. Epävarmuus on valloillaan ja uuden sodan uhka painaa ihmisten mieliä. On siis vain yksi selkeä tapa ylläpitää kaikkien toivoma rauha: avioliitto.",
+            "Ruotsin perillinen päätetään naittaa Suomen aateliston vaikutusvaltaisimpaan perheeseen. Turun piispa, Jukka Mikael AgriKola, tarttuu tehtävään ja lupaa yhden ottolapsistaan kruunulle.",
+            "Häitä vietetään viikon päästä. Kansa riemuitsee ja on lähestulkoon jo unohtanut sodan kauhut. Kaikki on kuitenkin vaarassa muuttua, kun nuori, viehkeä, varakas ja kaukainen sukulainen saapuu piispan vieraaksi odottamaan häitä. ",
+            "Onko velvollisuus tärkein hyve avioliitossa, vai riittääkö rakkaudelle tilaa naimakaupoilla? Onko jokaisen kohtalo jo syntymässä määrätty, vai ovatko kaikki lopulta oman onnensa seppiä? Tarinan salat selviävät ainoastaan seuraamalla niiden syntymistä.",
+            "Mutta kuka on mystinen muukalainen tupsulakissa, ja mitä hän tekee rapukulhossa?!"
+        ],
+        "images": 0,
+        "resources": [],
+        "colors": {
+          "bg1": "#ca4fec",
+          "bg2": "#00ffbf",
+          "button": "#ca4fec",
+          "buttonColor": "#00ffbf"
+        }
     }
   
   

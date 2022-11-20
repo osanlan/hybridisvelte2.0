@@ -74,7 +74,7 @@
             @media only screen and (max-width:1300px) {
                 width: 100%;
                 max-width: 100%;
-                margin: 0;
+                margin: 25px;
                 border-radius: 0;
                 > :global(img) {
                     border-radius: 0;
@@ -135,10 +135,15 @@
             }
 
             .photos {
+                width: 100%;
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
+                @media only screen and (max-width:500px) {
+                    :global(div) {
+                        width: 50%;
+                }}
             }
         }
 

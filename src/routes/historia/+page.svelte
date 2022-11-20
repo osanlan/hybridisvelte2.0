@@ -103,7 +103,6 @@
 </section>
 
 <style lang="scss">
-    
     .wrap {
         margin: 0 10vw;
         @media only screen and (max-width:800px) {
@@ -115,6 +114,7 @@
     }
     ul.grid {
         margin: 0;
+        margin-bottom: 20px;
         padding: 0;
         display: grid;
         gap: 1rem;
