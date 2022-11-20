@@ -1,3 +1,9 @@
+<script>
+    export let data;
+    console.log(data)
+    // let pageData = data.body.org.items[0].fields.data;
+
+</script>
 <svelte:head>
     <title>Speksi</title>
     <meta name="description" content="Speksistä ja HybridiSpeksistä" />

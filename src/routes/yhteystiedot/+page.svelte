@@ -1,11 +1,11 @@
 <script lang="ts">
     export let data;
-    let org = data.body.org.items[0].fields.data;
+    let pageData = data.body.org.items[0].fields.data;
     import Fa from 'svelte-fa/src/fa.svelte';
     import { faExternalLink } from '@fortawesome/free-solid-svg-icons'
 </script>
 <section class="row">
-    {#each org as group}
+    {#each pageData as group}
     <h2>{group.tableName}</h2>
     <ul>
     {#each group.people as person}

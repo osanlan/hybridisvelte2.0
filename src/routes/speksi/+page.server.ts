@@ -4,7 +4,7 @@ import { client } from '$lib/contentfulClient';
 
 export const load: PageServerLoad = async ({ fetch }) => {
     const pageData = await client.getEntries({
-        content_type: 'organization'
+        content_type: 'page'
     });
     if (pageData) {
         return {
