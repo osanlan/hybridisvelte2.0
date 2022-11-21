@@ -11,7 +11,6 @@
     let type = blockTypes[nodeType];
 
     function uplift(node) {
-        console.log(type)
         return {
             update({type, content}) {
                 const el = document.createElement(`${type}`)

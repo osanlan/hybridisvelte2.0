@@ -1,10 +1,7 @@
 <script>
     import ContentfulRichText from "$lib/components/contentfulRichText.svelte";
     export let data;
-    // let pageData = data.body.org.items[0].fields.data;
     let content = data.body.pageData.items[0].fields.content.content;
-    
-    console.log(content[0].content[0].value)
 </script>
 <svelte:head>
     <title>{data.body.pageData.items[0].fields.title}</title>
