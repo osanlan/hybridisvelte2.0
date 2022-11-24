@@ -1,79 +1,24 @@
-<script>
-    import { onMount } from "svelte";
-    import * as THREE from "three";
+<script lang="ts">
+	import * as THREE from 'three';
+	import * as SC from 'svelte-cubed';
+	import { randomVec3 } from '$lib/utils/vectors';
+	let count: number = 1000;
+	const geometry = new THREE.SphereBufferGeometry();
+	geometry.scale(0.1, 0.1, 0.1);
+	const material = new THREE.MeshBasicMaterial({
+		color: new THREE.Color('#ff00ff')
+	});
 
-    let container, scene, camera, renderer, stars, starGeo;
-
-    onMount (async ()  => {
-    function init() {
-		//create scene object
-		scene = new THREE.Scene();
-		
-      	//setup camera with facing upward
-		camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
-		camera.position.z = 1;
-		camera.rotation.x = Math.PI/2;
-		
-		//setup renderer
-		renderer = new THREE.WebGLRenderer();
-		renderer.setSize(window.innerWidth-50, window.innerHeight);
-		container.appendChild(renderer.domElement);
-
-        starGeo = new THREE.BufferGeometry();
-        const vertices = [];
-        for(let i=0;i<6000;i++) {
-            const x = Math.random() * 600 -300;
-            const y = Math.random() * 600 -300;
-            const z = Math.random() * 600 -300;
-            
-            vertices.push(x,y,z);
-        }
-        starGeo.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
-        starGeo.setAttribute('velocity', new THREE.Float32BufferAttribute([0,0,0], 3));
-        starGeo.setAttribute('acceleration', new THREE.Float32BufferAttribute([0.02,0.02,0.02], 3));
-
-        let sprite = new THREE.TextureLoader().load('star.png');
-        let starMaterial = new THREE.PointsMaterial({
-            color: 0xaaaaaa,
-            size: 0.7,
-            map: sprite
-        });
-
-        stars = new THREE.Points(starGeo, starMaterial);
-        scene.add(stars);
-
-		animate(); 
-    }
-    // //rendering loop
-    function animate() {      
-        starGeo.verticesNeedUpdate = true;
-        stars.rotation.y +=0.002;
-        
-        renderer.render(scene, camera);
-        requestAnimationFrame(animate);
-    }
-
-    init();
-});
-
+	let IMesh: any;
+	function initMesh(c: number) {
+		IMesh = new THREE.InstancedMesh(geometry, material, c);
+		const matrix = new THREE.Matrix4();
+		for (let i = 0; i < IMesh.count; i++) {
+			matrix.setPosition(randomVec3());
+			IMesh.setMatrixAt(i, matrix);
+		}
+	}
+	$: initMesh(count);
 </script>
 
-<div class="wrapper">
-    <div id="stars" bind:this={container}></div>
-</div>
-
-<style lang="scss">
-    .wrapper {
-        // width: 100vw;
-        // display: flex;
-        position: absolute;
-        z-index: -1;
-        #stars {
-            flex: 1;
-            :global("> canvas") {
-                overflow-x: hidden;
-                display: inline-block;
-            }
-        }
-    }
-</style>
+<SC.Primitive object={IMesh} />

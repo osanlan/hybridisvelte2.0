@@ -25,6 +25,7 @@
     "@fontsource/fira-mono": "^4.5.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "contentful": "^9.2.9",
+    "svelte-cubed": "^0.2.1",
     "svelte-fa": "^3.0.3",
     "sveltestrap": "^5.10.0",
     "three": "^0.145.0"
