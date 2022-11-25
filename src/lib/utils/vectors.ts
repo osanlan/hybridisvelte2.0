@@ -1,9 +1,8 @@
 import { tweened } from 'svelte/motion';
 import { linear } from 'svelte/easing';
 import type { Vec3RangeOptions } from '$lib/ts-models/general';
-import { Vector3 } from 'three';
-import { randFloat, randInt } from 'three/src/math/MathUtils';
-
+import * as THREE from 'three';
+// import { randFloat } from 'three/src/math/MathUtils';
 const defaultConfig = {
 	start: 0,
 	end: 15,
@@ -22,11 +21,11 @@ export const oscillatingVector = () => {
 };
 
 export const vec3OnSphere = (range: {min: number, max: number}) => {
-	const length = randInt(range.min, range.max);
-	return new Vector3(
-		randFloat(-Math.PI, Math.PI),
-		randFloat(-Math.PI, Math.PI),
-		randFloat(-Math.PI, Math.PI)
+	const length = THREE.MathUtils.randInt(range.min, range.max);
+	return new THREE.Vector3(
+		THREE.MathUtils.randFloat(-Math.PI, Math.PI),
+		THREE.MathUtils.randFloat(-Math.PI, Math.PI),
+		THREE.MathUtils.randFloat(-Math.PI, Math.PI)
 	).clampLength(length, length);
 };
 
@@ -71,22 +70,22 @@ export function randomVec3(range: Vec3RangeOptions = defaultVec3RangeOptions): V
 		}
 	}
 	// TODO: add range config args
-	const x = randInt(xMin, xMax);
-	const y = randInt(yMin, yMax);
-	const z = randInt(zMin, zMax);
-	return new Vector3(x, y, z);
+	const x = THREE.MathUtils.randInt(xMin, xMax);
+	const y = THREE.MathUtils.randInt(yMin, yMax);
+	const z = THREE.MathUtils.randInt(zMin, zMax);
+	return new THREE.Vector3(x, y, z);
 }
 
 export function randomAngle() {
-	return (randFloat(0, 2 * Math.PI));
+	return (THREE.MathUtils.randFloat(0, 2 * Math.PI));
 }
 
 export function randomPositionOnRing(config = { ringRange: [50, 60], depthRange: [-15, 15] }): Vector3 {
-	const distanceFromCenter = randInt(config.ringRange[0], config.ringRange[1]);
+	const distanceFromCenter = THREE.MathUtils.randInt(config.ringRange[0], config.ringRange[1]);
 	const angle = randomAngle();
-	return new Vector3(
+	return new THREE.Vector3(
 		Math.cos(angle) * distanceFromCenter, // x
 		Math.sin(angle) * distanceFromCenter, // y
-		randInt(config.depthRange[0], config.depthRange[1]) // z
+		THREE.MathUtils.randInt(config.depthRange[0], config.depthRange[1]) // z
 	);
 }
