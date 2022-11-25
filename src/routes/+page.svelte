@@ -12,7 +12,7 @@
 	antialias={false}
 	physicallyCorrectLights={false}
 >
-	<SC.PerspectiveCamera position={[40, 0, 0]} near={0.1} far={400} fov={55} />
+	<SC.PerspectiveCamera position={[40, 0, 0]} near={1} far={400} fov={55} />
 
 	<SC.OrbitControls
 		enabled={false}
