@@ -35,11 +35,6 @@
             </a>
             {/each}
         </div>
-        <div class="photos">
-            {#each photos as photo }
-            <ImageLoader class="photo" src="{'./db/' + speksi.year + '/' + speksi.year + '_' + photo + '_thumb.jpg'}" alt="kuva"></ImageLoader>
-            {/each}
-        </div>
     </div>
 </div>
 {/if}
