@@ -1,11 +1,10 @@
-import type { PageServerLoad } from "./$types";
-import { client } from '$lib/contentfulClient';
+import type { LayoutServerLoad } from './$types';
+import { client } from '$lib/contentfulClient'
 
-
-export const load: PageServerLoad = async ({ fetch }) => {
+export const load: LayoutServerLoad = async ({ url }) => {
     const pageData = await client.getEntries({
         content_type: 'page',
-        'fields.uid[in]': 'speksi'
+        'fields.uid[in]': url.pathname == '/' ? 'etusivu' : url.pathname
     });
     if (pageData) {
         return {
@@ -18,5 +17,5 @@ export const load: PageServerLoad = async ({ fetch }) => {
 
     return {
         status: 404
-    };
+    }
 }

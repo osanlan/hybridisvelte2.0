@@ -1,12 +1,15 @@
 <script lang="ts">
     import Header from "$lib/common/Header.svelte";
     import Footer from "$lib/common/Footer.svelte";
+    import type { LayoutData } from "./$types";
     import "../app.scss";
+
+    export let data: LayoutData;
 </script>
 
 <Header />
 <main>
-    <slot />
+    <slot pageData={data}/>
 </main>
 <Footer />
 
@@ -15,9 +18,6 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    /* padding: 1rem; */
     width: 100%;
-    /* margin: 0 auto; */
-    /* box-sizing: border-box; */
 }
 </style>

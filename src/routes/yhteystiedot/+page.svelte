@@ -1,17 +1,24 @@
 <script lang="ts">
-    export let data;
-    let pageData = data.body.org.items[0].fields.data;
     import Fa from 'svelte-fa/src/fa.svelte';
     import { faExternalLink } from '@fortawesome/free-solid-svg-icons'
+    import type { PageData } from './$types';
+
+    export let data: PageData;
+    let orgData = data.body?.pageData.items[0].fields?.data;
+    
+
 </script>
 <section class="row">
-    {#each pageData as group}
+    {#each orgData as group}
     <h2>{group.tableName}</h2>
     <ul>
     {#each group.people as person}
         {#if (group.id == 'yhdenvertaiset' && person.link)}
         <li>
-            <span class="text">{person.text} <a href="{person.link}" target="_blank">linkki lomakkeeseen</a> <Fa icon={faExternalLink} /></span>
+            <span class="text">
+                {person.text} <a href="{person.link}" target="_blank" rel="noreferrer">
+                    linkki lomakkeeseen</a> <Fa icon={faExternalLink} />
+            </span>
         </li>        
         {:else}
         <li>
@@ -41,10 +48,6 @@
             li {
                 list-style: none;
                 display: flex;
-                i {
-                    color: red;
-                }
-                // flex-wrap: wrap;
                 span {
                     width: 100%;
                     max-width: 400px;
