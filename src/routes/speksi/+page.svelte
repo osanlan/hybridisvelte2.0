@@ -1,7 +1,13 @@
 <script>
-    import ContentfulRichText from "$lib/components/contentfulRichText.svelte";
+    import { onMount } from 'svelte';
+    import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+
     export let data;
-    let content = data.body.pageData.items[0].fields.content.content;
+    
+    onMount(async () => {
+        document.getElementById('content').innerHTML = documentToHtmlString(data.body.pageData.items[0].fields.blocks[0].fields.content)
+    })
+    
 </script>
 <svelte:head>
     <title>{data.body.pageData.items[0].fields.title}</title>
@@ -11,9 +17,7 @@
 <section class="wrap">
     <img class="logo" src="./logo.png" alt="" />
     <div class="text">
-    {#each content as block}
-    <ContentfulRichText nodeType={block.nodeType}>{block.content[0].value}</ContentfulRichText>
-    {/each}
+        <div id="content"></div>
             <div class="speksit">
                 <a href="https://spex.abo.fi/">
                     <img src="./logos/speksit/abospex.svg" alt="Akademiska Spexet"/>

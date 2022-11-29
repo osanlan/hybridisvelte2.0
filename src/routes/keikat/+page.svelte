@@ -1,19 +1,24 @@
 <script>
-    import ContentfulRichText from "$lib/components/contentfulRichText.svelte";
+    import { onMount } from 'svelte';
+    import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+
     export let data;
-
-    let content = data.body.pageData.items[0].fields.content.content;
-
+    
+    onMount(async () => {
+        document.getElementById('bandContent').innerHTML = documentToHtmlString(data.body.pageData.items[0].fields.blocks[0].fields.content)
+        document.getElementById('actorContent').innerHTML = documentToHtmlString(data.body.pageData.items[0].fields.blocks[1].fields.content)
+    })
+    
 </script>
 <svelte:head>
-  <title>Tilaa esiintyjiä - HybridiSpeksi</title>
+    <title>Tilaa esiintyjiä - HybridiSpeksi</title>
 </svelte:head>
 <section class="wrap">
     <div class="text">
-        {#each content as block}
-        <ContentfulRichText nodeType={block.nodeType}>{block.content[0].value}</ContentfulRichText>
-        {/each}
-        
+        <div id="bandContent"></div>
+        <img src="logo.png" />
+        <div id="actorContent"></div>
+    </div>  
 </section>
 
 <style lang="scss">

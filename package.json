@@ -22,9 +22,10 @@
   },
   "type": "module",
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^15.13.1",
     "@fontsource/fira-mono": "^4.5.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
-    "contentful": "^9.2.9",
+    "contentful": "^9.2.13",
     "svelte-cubed": "^0.2.1",
     "svelte-fa": "^3.0.3",
     "sveltestrap": "^5.10.0",
