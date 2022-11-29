@@ -3,11 +3,15 @@
 	import * as THREE from 'three';
 	import * as SC from 'svelte-cubed';
 	import InstancedMesh from '$lib/components/stars.svelte';
-    import ContentfulRichText from "$lib/components/contentfulRichText.svelte";
+    import { onMount } from 'svelte';
+    import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
     import type { PageData } from './$types';
 
     export let data: PageData;
-    let content = data.body?.pageData.items[0].fields?.content?.content;
+
+    onMount(async () => {
+        document.getElementById('content').innerHTML = documentToHtmlString(data.body.pageData.items[0].fields.blocks[0].fields.content)
+    })
 </script>
 
 <section class="starfield">
@@ -50,9 +54,7 @@
         <img src="linna.svg" alt=""/>
     </div>
     <div class="text">
-        {#each content as block}
-        <ContentfulRichText nodeType={block.nodeType}>{block.content[0].value}</ContentfulRichText>
-        {/each}
+        <div id="content"></div>
     </div>
 </section>
 
