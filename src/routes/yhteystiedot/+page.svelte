@@ -8,7 +8,9 @@
     
 
 </script>
+
 <section class="row">
+    <img class="logo" src="./logo.png" alt="" />
     {#each orgData as group}
     <h2>{group.tableName}</h2>
     <ul>
@@ -22,8 +24,8 @@
         </li>        
         {:else}
         <li>
-            <span>{person.name}</span>
-            <span>{person.title}</span>
+            <span class="left">{person.name}</span>
+            <span class="right">{person.title}</span>
         </li>
         {/if}
     {/each}
@@ -37,26 +39,44 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        .logo {
+            width: 30vw;
+        }
         h2 {
+            color: rgb(83, 83, 83);
+            font-size: 2rem;
+            font-weight: 700;
             text-align: center;
         }
         ul {
             display: flex;
             flex-direction: column;
             align-items: center;
-            right: 0;
+            justify-content: center;
             li {
                 list-style: none;
                 display: flex;
+                justify-content: center;
+                align-items: center;
+                
                 span {
-                    width: 100%;
-                    max-width: 400px;
-                    padding: 0 10px;
-                    &:first-child {
+                    padding: 0.5rem 1rem;
+                    width: 25vw;
+                    @media screen and (max-width:700px) {
+                        width: 50vw;
+                    }
+                    &.left {
                         text-align: right;
+                    }
+                    &.right {
+                        text-align: left;
                     }
                     &.text {
                         text-align: center;
+                        width: 50vw;
+                        @media screen and (max-width:700px) {
+                            width: 90vw;
+                        }
                     }
                 }
             }
