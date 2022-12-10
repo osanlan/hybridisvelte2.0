@@ -1,10 +1,10 @@
 <script>
-    import { onMount } from 'svelte';
+    import { afterUpdate, onMount } from 'svelte';
     import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
+
     export let data;
-    
-    onMount(async () => {
+    afterUpdate(async () => {
         document.getElementById('bandContent').innerHTML = documentToHtmlString(data.body.pageData.items[0].fields.blocks[0].fields.content)
         document.getElementById('actorContent').innerHTML = documentToHtmlString(data.body.pageData.items[0].fields.blocks[1].fields.content)
     })
@@ -16,7 +16,7 @@
 <section class="wrap">
     <div class="text">
         <div id="bandContent"></div>
-        <img src="logo.png" />
+        <img src="logo.png" alt="HybridiSpeksin logo"/>
         <div id="actorContent"></div>
     </div>  
 </section>
