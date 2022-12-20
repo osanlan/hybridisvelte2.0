@@ -43,16 +43,16 @@
     </SC.Canvas>
 
 	<div class="welcome">
-		<img class="text" src="logo_text.png" alt="Welcome" draggable=false />
+		<img class="text" src="kreivi.png" alt="Welcome" draggable=false />
 		<div class="spin">
-			<img class="bow" src="logo_hourglass.png" alt="Welcome" draggable=false />
+			<!-- <img class="bow" src="logo_hourglass.png" alt="Welcome" draggable=false /> -->
 		</div>
 	</div>
 </section>
 <section>
-    <div class="castle">
+    <!-- <div class="castle">
         <img src="linna.svg" alt=""/>
-    </div>
+    </div> -->
     <div class="text">
         <div id="content"></div>
     </div>
