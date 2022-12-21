@@ -1,5 +1,5 @@
 <script>
-    import { afterUpdate, onMount } from 'svelte';
+    import { afterUpdate } from 'svelte';
     import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 
