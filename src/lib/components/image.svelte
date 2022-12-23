@@ -20,7 +20,7 @@
     </script>
     
     
-    <img src="{src}" alt="{alt}" class:loaded bind:this={thisImage} on:error="{() => getDefault()}"/>
+    <img src="{src}" alt="{alt}" loading="lazy" class:loaded bind:this={thisImage} on:error="{() => getDefault()}"/>
     
     <style lang="scss">
         img {

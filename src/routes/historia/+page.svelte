@@ -26,7 +26,6 @@
 
                 // Open (or close) fullwidth card.
                 if (toggle.getAttribute('aria-expanded') === 'false') {
-                    console.log("haha");
                     // Do we have another fullwidth card already open? If so, close it.
                     fullwidthCards.forEach(fullwidthOpen => {
                         if (!fullwidthOpen.classList.contains('is-hidden')) {
