@@ -15,7 +15,7 @@
 
 <section class="starfield">
 	<div class="welcome">
-		<img src="kreivi.png" alt="Welcome" draggable=false />
+		<img src="gold_logo.png" alt="Welcome" draggable=false />
 	</div>
 </section>
 <section class="wrap" >
@@ -48,14 +48,15 @@
 			justify-content: center;
 			align-items: center;
 			position: relative;
-			width: 100%;
-			// height: 25vw;
+			max-width: 80%;
             z-index: 1;
             img {
 				z-index: 1;
-				height: 50vw;
-                @media (max-width: 600px) {
-                    height: 50vh;
+				height: 70vh;
+                margin: 4rem 0;
+                @media (max-width: 800px) {
+                    height: 100%;
+                    width: 90vw;
                 }
             }
 		}
