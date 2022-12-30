@@ -116,20 +116,21 @@
         margin-bottom: 20px;
         padding: 0;
         display: grid;
-        gap: 1rem;
+        gap: 2rem;
         grid-auto-flow: dense; /* 'dense' packing fills in holes earlier in the grid. */
         grid-template-columns: repeat(auto-fit, 240px); /* 'auto-fit' grid columns, so no media queries required. */
         justify-content: center;
+        overflow: overlay;
         @media only screen and (max-width:600px) {
-            grid-template-columns: 100px 240px 100px;
+            grid-template-columns: 100vw;
         }
         li {
             list-style: none;
+            max-width: 100%;
             grid-column-start: auto;
-            @media only screen and (max-width:600px) {
-                grid-column-start: 2;
-            }
+            margin: 0 auto;
             &.poster {
+                width: 240px;
                 button {
                     all: unset;
                     background-repeat: no-repeat;
@@ -144,8 +145,8 @@
             }
             &.fullwidth {
                 grid-column: 1 / -1; /* Make fullwidth card span all grid columns. */
-                // background: wheat;
             }
+
             &.is-hidden {
                 display: none;
             }

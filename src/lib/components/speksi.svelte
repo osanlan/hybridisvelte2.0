@@ -48,16 +48,19 @@
     .container {
         font-family: 'Red Hat Display', sans-serif;
         display: flex;
-        width: 100%;
-        justify-content: center;                     
+        margin: 0 auto;
+        justify-content: center;    
+        align-items: center;                 
         background-image: linear-gradient(to right, var(--bg1), var(--bg2), var(--bg1));
         @media only screen and (max-width:850px) {
-            border-radius: 0;   
+            background-image: none;
+            border-radius: 0; 
+            padding-left: 0;
+            padding-right: 0;  
         }
 
         .speksi {
             width: 70%;
-            flex-direction: column;
             max-width: 90%;
             text-align: center;
             background-color: white;
@@ -66,13 +69,18 @@
             > :global(img) {
                 border-radius: 10px 10px 0 0;
                 width: 100%;
+                @media only screen and (max-width:850px) {
+                    border-radius: 0;
+                }
             }
             @media only screen and (max-width:850px) {
-                width: 90%;
-                margin: 15px;
-            }
-            @media only screen and (max-width:1300px) {
+                max-width: 100vw;
+                font-size: 1rem;
                 width: 100%;
+                margin: 0;
+                border-radius: 0;
+            }
+            @media only screen and (min-width:1300px) {
                 max-width: 100%;
                 margin: 25px;
                 border-radius: 0;
@@ -82,7 +90,7 @@
             }
             h2 {
                 margin: 20px auto;
-                width: 70%;
+                width: 90%;
                 text-transform: uppercase;
                 color: var(--bg1);
                 text-align: center;
@@ -93,9 +101,10 @@
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
-                max-width: 80%;
+                max-width: 90%;
                 @media only screen and (max-width:850px) {
                     flex-direction: column;
+                    align-items: center;
                 }
                 li {
                     padding: 0 10px;
@@ -106,7 +115,8 @@
             }
             .synopsis {
                 width: 80%;
-                margin: 0 auto;
+                text-align: justify;
+                margin: 2rem auto;
             }
             .buttons {
                 display: flex;
@@ -142,7 +152,7 @@
                 justify-content: center;
                 @media only screen and (max-width:500px) {
                     :global(div) {
-                        width: 50%;
+                        width: 100%;
                 }}
             }
         }
