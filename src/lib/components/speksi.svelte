@@ -151,9 +151,13 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 @media only screen and (max-width:500px) {
-                    :global(div) {
-                        width: 100%;
-                }}
+
+                }
+                @media (max-width: 400px) {
+                    :global(img) {
+                        width: 150px;
+                    }
+                }
             }
         }
 
