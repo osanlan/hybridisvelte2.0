@@ -13,11 +13,11 @@
 
 </script>
 
-<section class="starfield">
+<!-- <section class="starfield">
 	<div class="welcome">
 		<img src="gold_logo.png" alt="Welcome" draggable=false />
 	</div>
-</section>
+</section> -->
 <section class="wrap" >
     <div class="text" id="content">
         <div id="frontContent"></div>
@@ -84,7 +84,7 @@
                 font-size: 3rem;
             }
             :global(h2::first-letter) {
-                // font-family:'royalinitial';
+                // font-family:'chomsky';
                 font-size: 5rem;
                 text-shadow: 1px 1px 1px #000;
                 margin: 0 .5rem;
