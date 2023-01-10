@@ -89,8 +89,7 @@
     <ul class="grid">
         {#each speksit as speksi}
         <li class="poster">
-            <button type="button" data-quick-view style="
-                background-image: url(./db/{speksi.year}/{speksi.poster});">
+            <button type="button" id="{speksi.name}button" title="{speksi.name}" data-quick-view style="background-image: url(./db/{speksi.year}/{speksi.poster});">
             </button>            
         </li>
         <li class="fullwidth is-hidden" id="quickview-{speksi.year}">
