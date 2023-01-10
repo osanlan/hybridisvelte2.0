@@ -12,6 +12,10 @@
 
 
 </script>
+<svelte:head>
+    <title>HybridiSpeksi</title>
+    <meta name="description" content="HybridiSpeksi on Turun yliopiston luonnontieteiden ja tekniikan opiskelijoiden vuosittain toteuttama teatteriproduktio." />
+</svelte:head>
 
 <!-- <section class="starfield">
 	<div class="welcome">
