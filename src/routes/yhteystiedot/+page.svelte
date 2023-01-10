@@ -8,7 +8,10 @@
     
 
 </script>
-
+<svelte:head>
+    <title>Yhteystiedot - HybridiSpeksi</title>
+    <meta name="description" content="HybridiSpeksin hallituksen ja tuotantotiimin yhteystiedot." />
+</svelte:head>
 <section class="row">
     <img class="logo" src="./logo.png" alt="" />
     {#each orgData as group}

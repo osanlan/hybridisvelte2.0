@@ -82,6 +82,7 @@
 
 <svelte:head>
     <title>Aikaisemmat HybridiSpeksit</title>
+    <meta name="description" content="Aikaisemmat HybridiSpeksin produktiot" />
 </svelte:head>
 
 <section class="wrap" bind:this={root}>

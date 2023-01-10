@@ -12,6 +12,7 @@
 </script>
 <svelte:head>
     <title>Tilaa esiintyjiä - HybridiSpeksi</title>
+    <meta name="description" content="HybridiSpeksin bändin ja muita esiintyjiä voi tilata keikkailemaan." />
 </svelte:head>
 <section class="wrap">
     <div class="text">

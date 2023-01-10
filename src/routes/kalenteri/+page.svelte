@@ -6,6 +6,8 @@
 <svelte:window bind:innerWidth={media}/>
 <svelte:head>
     <title>HybridiSpeksin kalenteri</title>
+    <meta name="description" content="HybridiSpeksin kalenteri" />
+
 </svelte:head>
 
 <section class="wrap">
